@@ -1,0 +1,95 @@
+\begin{thebibliography}{10}
+
+\bibitem{baumgart07}
+I.~Baumgart and S.~Mies.
+\newblock S/kademlia: A practicable approach towards secure key-based routing.
+\newblock In {\em Parallel and Distributed Systems, 2007 International
+  Conference on}, volume~2, pages 1--8. IEEE, 2007.
+
+\bibitem{BitTorrentUsers}
+I.~BitTorrent.
+\newblock Bittorrent and µtorrent software surpass 150 million user milestone,
+  Jan. 2012.
+
+\bibitem{cohen03}
+B.~Cohen.
+\newblock Incentives build robustness in bittorrent.
+\newblock In {\em Workshop on Economics of Peer-to-Peer systems}, volume~6,
+  pages 68--72, 2003.
+
+\bibitem{dean11}
+J.~Dean and S.~Ghemawat.
+\newblock leveldb--a fast and lightweight key/value database library by google,
+  2011.
+
+\bibitem{freedman04}
+M.~J. Freedman, E.~Freudenthal, and D.~Mazieres.
+\newblock Democratizing content publication with coral.
+\newblock In {\em NSDI}, volume~4, pages 18--18, 2004.
+
+\bibitem{AFS}
+J.~H. Howard, M.~L. Kazar, S.~G. Menees, D.~A. Nichols, M.~Satyanarayanan,
+  R.~N. Sidebotham, and M.~J. West.
+\newblock Scale and performance in a distributed file system.
+\newblock {\em ACM Transactions on Computer Systems (TOCS)}, 6(1):51--81, 1988.
+
+\bibitem{Oceanstore}
+J.~Kubiatowicz, D.~Bindel, Y.~Chen, S.~Czerwinski, P.~Eaton, D.~Geels,
+  R.~Gummadi, S.~Rhea, H.~Weatherspoon, W.~Weimer, et~al.
+\newblock Oceanstore: An architecture for global-scale persistent storage.
+\newblock {\em ACM Sigplan Notices}, 35(11):190--201, 2000.
+
+\bibitem{levin08}
+D.~Levin, K.~LaCurts, N.~Spring, and B.~Bhattacharjee.
+\newblock Bittorrent is an auction: analyzing and improving bittorrent's
+  incentives.
+\newblock In {\em ACM SIGCOMM Computer Communication Review}, volume~38, pages
+  243--254. ACM, 2008.
+
+\bibitem{mashtizadeh13}
+A.~J. Mashtizadeh, A.~Bittau, Y.~F. Huang, and D.~Mazieres.
+\newblock Replication, history, and grafting in the ori file system.
+\newblock In {\em Proceedings of the Twenty-Fourth ACM Symposium on Operating
+  Systems Principles}, pages 151--166. ACM, 2013.
+
+\bibitem{maymounkov02}
+P.~Maymounkov and D.~Mazieres.
+\newblock Kademlia: A peer-to-peer information system based on the xor metric.
+\newblock In {\em Peer-to-Peer Systems}, pages 53--65. Springer, 2002.
+
+\bibitem{mazieres00}
+D.~Mazieres and F.~Kaashoek.
+\newblock Self-certifying file system.
+\newblock 2000.
+
+\bibitem{mazieres98}
+D.~Mazieres and M.~F. Kaashoek.
+\newblock Escaping the evils of centralized control with self-certifying
+  pathnames.
+\newblock In {\em Proceedings of the 8th ACM SIGOPS European workshop on
+  Support for composing distributed applications}, pages 118--125. ACM, 1998.
+
+\bibitem{ICE}
+J.~Rosenberg and A.~Keranen.
+\newblock Interactive connectivity establishment (ice): A protocol for network
+  address translator (nat) traversal for offer/answer protocols.
+\newblock 2013.
+
+\bibitem{LEDBAT}
+S.~Shalunov, G.~Hazel, J.~Iyengar, and M.~Kuehlewind.
+\newblock Low extra delay background transport (ledbat).
+\newblock {\em draft-ietf-ledbat-congestion-04. txt}, 2010.
+
+\bibitem{SCTP}
+R.~R. Stewart and Q.~Xie.
+\newblock {\em Stream control transmission protocol (SCTP): a reference guide}.
+\newblock Addison-Wesley Longman Publishing Co., Inc., 2001.
+
+\bibitem{wang13}
+L.~Wang and J.~Kangasharju.
+\newblock Measuring large-scale distributed systems: case of bittorrent
+  mainline dht.
+\newblock In {\em Peer-to-Peer Computing (P2P), 2013 IEEE Thirteenth
+  International Conference on}, pages 1--10. IEEE, 2013.
+
+\end{thebibliography}

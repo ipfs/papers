@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: ipfs-cap2pfs.aux
+The style file: abbrv.bst
+Database file #1: ipfs-cap2pfs.bib
+Warning--entry type for "BitTorrentUsers" isn't style-file defined
+--line 23 of file ipfs-cap2pfs.bib
+Warning--I didn't find a database entry for "CFS"
+Warning--I didn't find a database entry for "Camlistore"
+Warning--I didn't find a database entry for "Dat"
+Warning--I didn't find a database entry for "WebRTC"
+Warning--I didn't find a database entry for "RabinFingerprints"
+Warning--I didn't find a database entry for "LBFS"
+Warning--I didn't find a database entry for "rsync"
+Warning--I didn't find a database entry for "Plan9"
+Warning--I didn't find a database entry for "Fossil"
+Warning--I didn't find a database entry for "Venti"
+Warning--I didn't find a database entry for "Proquint"
+Warning--I didn't find a database entry for "FUSE"
+Warning--can't use both volume and number fields in levin08
+Warning--empty journal in mazieres00
+Warning--empty journal in ICE
+You've used 16 entries,
+            2118 wiz_defined-function locations,
+            616 strings with 6732 characters,
+and the built_in function-call counts, 6168 in all, are:
+= -- 609
+> -- 301
+< -- 12
++ -- 118
+- -- 102
+* -- 403
+:= -- 977
+add.period$ -- 52
+call.type$ -- 16
+change.case$ -- 97
+chr.to.int$ -- 0
+cite$ -- 19
+duplicate$ -- 249
+empty$ -- 478
+format.name$ -- 102
+if$ -- 1337
+int.to.chr$ -- 0
+int.to.str$ -- 16
+missing$ -- 15
+newline$ -- 81
+num.names$ -- 32
+pop$ -- 131
+preamble$ -- 1
+purify$ -- 82
+quote$ -- 0
+skip$ -- 196
+stack$ -- 0
+substring$ -- 327
+swap$ -- 84
+text.length$ -- 12
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 62
+warning$ -- 3
+while$ -- 60
+width$ -- 18
+write$ -- 176
+(There were 16 warnings)
