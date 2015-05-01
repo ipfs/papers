@@ -831,7 +831,7 @@ indirect blocks. Since \texttt{lists} can contain other \texttt{lists}, topologi
 
     > ipfs file-cat <ttt111-hash> --json
     {
-      "data": ["tree", "tree", "blob"],
+      "data": nil,
       "links": [
         { "hash": "<ttt222-hash>",
           "name": "ttt222-name", "size": 1234 },
@@ -859,8 +859,8 @@ directory, a map of names to hashes. The hashes reference \texttt{blobs}, \textt
 
 \begin{verbatim}
 {
-  "data": ["blob", "list", "blob"],
-    // trees have an array of object types as data
+  "data": nil,
+    // trees have no data, only links
   "links": [
     { "hash": "XLYkgq61DYaQ8NhkcqyU7rLcnSa7dSHQ16x",
       "name": "less", "size": 189458 },
