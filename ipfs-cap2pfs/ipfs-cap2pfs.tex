@@ -8,7 +8,25 @@
 \usepackage{array}
 \usepackage{amstext}
 \usepackage{mathtools}
+
+\usepackage[backend=bibtex,style=numeric,firstinits=true,url=false,doi=false]{biblatex} % equivalent to abbrv style in bibtex
+% macro for clickable reference http://goo.gl/jso0h8
+\newbibmacro{string+url}[1]{%
+  \iffieldundef{url}{#1}{\href{\thefield{url}}{#1}}}
+\DeclareFieldFormat{title}{\usebibmacro{string+url}{\mkbibemph{#1}}}
+\DeclareFieldFormat[article,online,inproceedings,incollection,misc,book]{title}{\usebibmacro{string+url}{\mkbibquote{#1}}}
+
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref} % must be loaded last except for few packages
+\hypersetup{
+    colorlinks,
+    linkcolor={red!80!black},
+    citecolor={gray!90!black},
+    urlcolor={blue!80!black}
+}
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+
+\bibliography{ipfs-cap2pfs}
 
 \begin{document}
 
@@ -1136,8 +1154,7 @@ IPFS is the synthesis of many great ideas and systems. It would be impossible to
 
 \section{References TODO}
 
-\bibliographystyle{abbrv}
-\bibliography{ipfs-cap2pfs}
+\printbibliography
 %\balancecolumns
 %\subsection{References}
 \end{document}
