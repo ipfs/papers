@@ -6,7 +6,7 @@ all: $(LONG).pdf
 
 $(LONG).pdf: $(SHORT).tex sig-alternate.cls $(SHORT).bib
 	pdflatex $(SHORT).tex
-	bibtex $(SHORT)
+	biber $(SHORT)
 	pdflatex $(SHORT).tex
 	pdflatex $(SHORT).tex
 	mv $(SHORT).pdf $(LONG).pdf
