@@ -50,7 +50,7 @@ This section reviews important properties of successful peer-to-peer systems, wh
 
 \subsection{Distributed Hash Tables}
 
-Distributed Hash Tables (DHTs) are widely used to coordinate and maintain metadata about peer-to-peer systems. For example, the BitTorrent MainlineDHT tracks sets of peers part of a torrent swarm.
+Distributed Hash Tables (DHTs) are widely used to coordinate and maintain metadata about peer-to-peer systems. For example, the BitTorrent Mainline DHT tracks sets of peers part of a torrent swarm.
 
 \subsubsection{Kademlia DHT}
 
@@ -59,7 +59,7 @@ Kademlia~\cite{maymounkov02} is a popular DHT that provides:
 \begin{enumerate}
 
   \item Efficient lookup through massive networks:
-        queries on average contact $ \ceil{log_2 (n)} $ nodes.
+        queries on average contact $ \ceil{log_2 (n)} $ nodes
         (e.g. $20$ hops for a network of $10,000,000$ nodes).
 
   \item Low coordination overhead: it optimizes the number of
@@ -67,10 +67,10 @@ Kademlia~\cite{maymounkov02} is a popular DHT that provides:
 
   \item Resistance to various attacks by preferring long-lived nodes.
 
-  \item Wide usage in peer-to-peer applications, including \\
-        Gnutella and BitTorrent, forming networks of over 20 million nodes~\cite{wang13}.
+  \item Wide usage in peer-to-peer applications, including
+        Gnu\-tella and BitTorrent, forming networks of over 20 million nodes~\cite{wang13}.
 
- \end{enumerate}
+\end{enumerate}
 
 
 \subsubsection{Coral DSHT}
@@ -82,7 +82,7 @@ particularly important ways:
 
 \begin{enumerate}
 
-  \item Kademlia stores values in nodes whose ids are ``nearest'' (using
+  \item Kademlia stores values in nodes whose identifiers are ``nearest'' (using
         XOR-distance) to the key. This does not take into account application
         data locality, ignores ``far'' nodes that may already have the data,
         and forces ``nearest'' nodes to store it, whether they need it or not.
@@ -111,7 +111,7 @@ S/Kademlia~\cite{baumgart07} extends Kademlia to protect against malicious attac
 \begin{enumerate}
 
   \item S/Kademlia provides schemes to secure \texttt{NodeId} generation,
-        and prevent Sybill attacks. It requires nodes to create a PKI key pair, derive their identity from it, and sign their messages to each other. One scheme includes a proof-of-work crypto puzzle to make generating Sybills expensive.
+        and prevent Sybil attacks. It requires nodes to create a PKI key pair, derive their identity from it, and sign their messages to each other. One scheme includes a proof-of-work crypto puzzle to make generating Sybils expensive.
 
   \item S/Kademlia nodes lookup values over disjoint paths, in order to
         ensure honest nodes can connect to each other in the presence of a large fraction of adversaries in the network. S/Kademlia achieves a success rate of 0.85 even with an adversarial fraction as large as half of the nodes.
@@ -383,7 +383,7 @@ The \textit{debt ratio} is a measure of trust:
 lenient to debts between nodes that have previously exchanged lots of data
 successfully, and merciless to unknown, untrusted nodes. This
 (a) provides resistance to attackers who would create lots of new nodes
-(sybill attacks),
+(Sybil attacks),
 (b) protects previously successful trade relationships, even if one of the
 nodes is temporarily unable to provide value, and
 (c) eventually chokes relationships that have deteriorated until they
@@ -1136,7 +1136,7 @@ IPFS is an ambitious vision of new decentralized Internet infrastructure, upon w
 
 \section{Acknowledgments}
 
-IPFS is the synthesis of many great ideas and systems. It would be impossible to dare such ambitious goals without standing on the shoulders of such giants. Personal thanks to David Dalrymple, Joe Zimmerman, and Ali Yahya for long discussions on many of these ideas, in particular: exposing the general Merkle DAG (David, Joe), rolling hash blocking (David), and s/kademlia sybill protection (David, Ali). And special thanks to David Mazieres, for his ever brilliant ideas.
+IPFS is the synthesis of many great ideas and systems. It would be impossible to dare such ambitious goals without standing on the shoulders of such giants. Personal thanks to David Dalrymple, Joe Zimmerman, and Ali Yahya for long discussions on many of these ideas, in particular: exposing the general Merkle DAG (David, Joe), rolling hash blocking (David), and S/Kademlia Sybil protection (David, Ali). And special thanks to David Mazieres, for his ever brilliant ideas.
 
 \section{References TODO}
 
