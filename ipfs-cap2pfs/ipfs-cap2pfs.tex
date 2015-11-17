@@ -14,6 +14,8 @@
 \usepackage[backend=biber,style=trad-abbrv]{biblatex}
 \bibliography{ipfs-cap2pfs}
 
+\usepackage{cleveref}
+
 \begin{document}
 
 \title{IPFS - Content-Addressed, Versioned, P2P File System (DRAFT 3)}
@@ -166,24 +168,24 @@ Thus the \textit{name} of an SFS file system certifies its server. The user can 
 
 \section{IPFS Design}
 
-IPFS is a distributed file system which synthesizes successful ideas from previous peer-to-peer sytems, including DHTs, BitTorrent, Git, and SFS. The contribution of IPFS is simplifying, evolving, and connecting proven techniques into a single cohesive system, greater than the sum of its parts. IPFS presents a new platform for writing and deploying applications, and a new system for distributing and versioning large data. IPFS could even evolve the web itself.
+IPFS is a distributed file system which synthesizes successful ideas from previous peer-to-peer sytems, including DHTs, BitTorrent, Git, and SFS. The contribution of IPFS is simplifying, evolving, and connecting proven techniques into a single cohesive system, greater than the sum of its parts. IPFS presents a new platform for writing and deploying applications, and a new system for distributing and versioning large data. IPFS could even evolve the Web itself.
 
-IPFS is peer-to-peer; no nodes are privileged. IPFS nodes store IPFS objects in local storage. Nodes connect to each other and transfer objects. These objects represent files and other data structures. The IPFS Protocol is divided into a stack of sub-protocols responsible for different functionality:
+IPFS is peer-to-peer: no nodes are privileged. IPFS nodes store IPFS objects in local storage. Nodes connect to each other and transfer objects. These objects represent files and other data structures. The IPFS Protocol is divided into a stack of sub-protocols responsible for different functionality:
 
 \begin{enumerate}
-  \item \textbf{Identities} - manage node identity generation and verification. Described in Section 3.1.
+  \item \textbf{Identities} - manage node identity generation and verification. Described in \Cref{sec:design-identities}.
 
-  \item \textbf{Network} - manages connections to other peers, uses various underlying network protocols. Configurable. Described in Section 3.2.
+  \item \textbf{Network} - manages connections to other peers, uses various underlying network protocols. Configurable. Described in \Cref{sec:design-network}.
 
-  \item \textbf{Routing} - maintains information to locate specific peers and objects. Responds to both local and remote queries. Defaults to a DHT, but is swappable. Described in Section 3.3.
+  \item \textbf{Routing} - maintains information to locate specific peers and objects. Responds to both local and remote queries. Defaults to a DHT, but is swappable. Described in \Cref{sec:design-routing}.
 
-  \item \textbf{Exchange} - a novel block exchange protocol (BitSwap) that governs efficient block distribution. Modelled as a market, weakly incentivizes data replication. Trade Strategies swappable. Described in Section 3.4.
+  \item \textbf{Exchange} - a novel block exchange protocol (BitSwap) that governs efficient block distribution. Modelled as a market, weakly incentivizes data replication. Trade strategies are swappable. Described in \Cref{sec:design-exchange}.
 
-  \item \textbf{Objects} - a Merkle DAG of content-addressed immutable objects with links. Used to represent arbitrary datastructures, e.g. file hierarchies and communication systems. Described in Section 3.5.
+  \item \textbf{Objects} - a Merkle DAG of content-addressed immutable objects with links. Used to represent arbitrary data structures, e.g. file hierarchies and communication systems. Described in \Cref{sec:design-objects}.
 
-  \item \textbf{Files} - versioned file system hierarchy inspired by Git. Described in Section 3.6.
+  \item \textbf{Files} - versioned file system hierarchy inspired by Git. Described in \Cref{sec:design-files}.
 
-  \item \textbf{Naming} - A self-certifying mutable name system. Described in Section 3.7.
+  \item \textbf{Naming} - A self-certifying mutable name system. Described in \Cref{sec:design-ipns}.
 \end{enumerate}
 
 
@@ -194,6 +196,7 @@ building the protocol stack from the bottom up.
 Notation: data structures and functions below are specified in Go syntax.
 
 \subsection{Identities}
+\label{sec:design-identities}
 
 Nodes are identified by a \texttt{NodeId}, the cryptographic hash\footnote{Throughout this document, \textit{hash} and \textit{checksum} refer specifically to cryptographic hashes of data.} of a public-key, created with S/Kademlia's static crypto puzzle~\cite{baumgart07}. Nodes store their public and private keys (encrypted with a passphrase). Users are free to instatiate a ``new'' node identity on every launch, though that loses accrued network benefits. Nodes are incentivized to remain the same.
 
@@ -237,6 +240,7 @@ Upon first connecting, peers exchange public keys, and check: \texttt{hash(other
 This allows the system to (a) choose the best function for the use case (e.g. stronger security vs faster performance), and (b) evolve as function choices change. Self-describing values allow using different parameter choices compatibly.
 
 \subsection{Network}
+\label{sec:design-network}
 
 IPFS nodes communicate regularly with hundreds of other nodes in the network, potentially across the wide Internet. The IPFS network stack features:
 
@@ -261,6 +265,7 @@ IPFS can use any network; it does not rely on or assume access to IP. This allow
 \end{verbatim}
 
 \subsection{Routing}
+\label{sec:design-routing}
 
 IPFS nodes require a routing system that can find (a) other peers' network addresses and (b) peers who can serve particular objects. IPFS achieves this using a DSHT based on S/Kademlia and Coral, using the properties discussed in 2.1. The size of objects and use patterns of IPFS are similar to Coral \cite{freedman04} and Mainline~\cite{wang13}, so the IPFS DHT makes a distinction for values stored based on their size. Small values (equal to or less than \texttt{1KB}) are stored directly on the DHT. For larger values, the DHT stores references, which are the \texttt{NodeIds} of peers who can serve the block.
 
@@ -290,6 +295,7 @@ The interface of this DSHT is the following:
 Note: different use cases will call for substantially different routing systems (e.g. DHT in wide network, static HT in local network). Thus the IPFS routing system can be swapped for one that fits users' needs. As long as the interface above is met, the rest of the system will continue to function.
 
 \subsection{Block Exchange - BitSwap Protocol}
+\label{sec:design-exchange}
 
 In IPFS, data distribution happens by exchanging blocks with peers using a
 BitTorrent inspired protocol: BitSwap. Like BitTorrent, BitSwap peers are
@@ -566,6 +572,7 @@ the future, if it is useful to do so.
 % TODO: Rate Limiting / Node Silencing
 
 \subsection{Object Merkle DAG}
+\label{sec:design-objects}
 
 The DHT and BitSwap allow IPFS to form a massive peer-to-peer system for storing and distributing blocks quickly and robustly. On top of these, IPFS builds a Merkle DAG, a directed acyclic graph where links between objects are cryptographic hashes of the targets embedded in the sources. This is a generalization of the Git data structure. Merkle DAGs provide IPFS many useful properties, including:
 
@@ -723,6 +730,7 @@ Cryptographic operations change the object's hash, defining a different object. 
 
 
 \subsection{Files}
+\label{sec:design-files}
 
 IPFS also defines a set of objects for modeling a versioned filesystem on top of the Merkle DAG. This object model is similar to Git's:
 
@@ -969,6 +977,7 @@ For example, \texttt{flattened tree} for \texttt{ttt111} above:
 
 
 \subsection{IPNS: Naming and Mutable State}
+\label{sec:design-ipns}
 
 So far, the IPFS stack forms a peer-to-peer block exchange constructing a content-addressed DAG of objects. It serves to publish and retrieve immutable objects. It can even track the version history of these objects. However, there is a critical component missing: mutable naming. Without it, all communication of new content must happen off-band, sending IPFS links. What is required is some way to retrieve mutable state at \textit{the same path}.
 
@@ -978,7 +987,7 @@ It is worth stating why -- if mutable data is necessary in the end -- we worked 
   Objects are \textbf{permanent}
 \end{center}
 
-\noindent These are the critical properties of a high-performance distributed system, where data is expensive to move across network links. Object content addressing constructs a web with (a) significant bandwidth optimizations, (b) untrusted content serving, (c) permanent links, and (d) the ability to make full permanent backups of any object and its references.
+\noindent These are the critical properties of a high-performance distributed system, where data is expensive to move across network links. Object content addressing constructs a Web with (a) significant bandwidth optimizations, (b) untrusted content serving, (c) permanent links, and (d) the ability to make full permanent backups of any object and its references.
 
 The Merkle DAG, immutable content-addressed objects, and Naming, mutable pointers to the Merkle DAG, instantiate a dichotomy present in many successful distributed systems. These include the Git Version Control System, with its immutable objects and mutable references; and Plan9 \cite{Plan9}, the distributed successor to UNIX, with its mutable Fossil \cite{Fossil} and immutable Venti \cite{Venti} filesystems. LBFS \cite{LBFS} also uses mutable indices and immutable chunks.
 
@@ -1113,7 +1122,7 @@ IPFS is designed to be used in a number of different ways. Here are just some of
   \item As a linked (and encrypted) communications platform.
   \item As an integrity checked CDN for large files (without SSL).
   \item As an encrypted CDN.
-  \item On webpages, as a web CDN.
+  \item On webpages, as a Web CDN.
   \item As a new Permanent Web where links do not die.
 \end{enumerate}
 
@@ -1131,7 +1140,7 @@ The IPFS implementations target:
 The ideas behind IPFS are the product of decades of successful distributed systems research in academia and open source. IPFS synthesizes many of the best ideas from the most successful systems to date. Aside from BitSwap, which is a novel protocol, the main contribution of IPFS is this coupling of systems and synthesis of designs.
 
 
-IPFS is an ambitious vision of new decentralized Internet infrastructure, upon which many different kinds of applications can be built. At the bare minimum, it can be used as a global, mounted, versioned filesystem and namespace, or as the next generation file sharing system. At its best, it could push the web to new horizons, where publishing valuable information does not impose hosting it on the publisher but upon those interested, where users can trust the content they receive without trusting the peers they receive it from, and where old but important files do not go missing. IPFS looks forward to bringing us toward the Permanent Web.
+IPFS is an ambitious vision of new decentralized Internet infrastructure, upon which many different kinds of applications can be built. At the bare minimum, it can be used as a global, mounted, versioned filesystem and namespace, or as the next generation file sharing system. At its best, it could push the Web to new horizons, where publishing valuable information does not impose hosting it on the publisher but upon those interested, where users can trust the content they receive without trusting the peers they receive it from, and where old but important files do not go missing. IPFS looks forward to bringing us toward the Permanent Web.
 
 
 \section{Acknowledgments}
