@@ -51,6 +51,7 @@ This paper introduces IPFS, a novel peer-to-peer version-controlled filesystem s
 This section reviews important properties of successful peer-to-peer systems, which IPFS combines.
 
 \subsection{Distributed Hash Tables}
+\label{sec:bg-dhts}
 
 Distributed Hash Tables (DHTs) are widely used to coordinate and maintain metadata about peer-to-peer systems. For example, the BitTorrent Mainline DHT tracks sets of peers part of a torrent swarm.
 
@@ -170,7 +171,7 @@ Thus the \textit{name} of an SFS file system certifies its server. The user can 
 
 IPFS is a distributed file system which synthesizes successful ideas from previous peer-to-peer sytems, including DHTs, BitTorrent, Git, and SFS. The contribution of IPFS is simplifying, evolving, and connecting proven techniques into a single cohesive system, greater than the sum of its parts. IPFS presents a new platform for writing and deploying applications, and a new system for distributing and versioning large data. IPFS could even evolve the Web itself.
 
-IPFS is peer-to-peer: no nodes are privileged. IPFS nodes store IPFS objects in local storage. Nodes connect to each other and transfer objects. These objects represent files and other data structures. The IPFS Protocol is divided into a stack of sub-protocols responsible for different functionality:
+IPFS is peer-to-peer; no nodes are privileged. IPFS nodes store IPFS objects in local storage. Nodes connect to each other and transfer objects. These objects represent files and other data structures. The IPFS Protocol is divided into a stack of sub-protocols responsible for different functionality:
 
 \begin{enumerate}
   \item \textbf{Identities} - manage node identity generation and verification. Described in \Cref{sec:design-identities}.
@@ -198,7 +199,7 @@ Notation: data structures and functions below are specified in Go syntax.
 \subsection{Identities}
 \label{sec:design-identities}
 
-Nodes are identified by a \texttt{NodeId}, the cryptographic hash\footnote{Throughout this document, \textit{hash} and \textit{checksum} refer specifically to cryptographic hashes of data.} of a public-key, created with S/Kademlia's static crypto puzzle~\cite{baumgart07}. Nodes store their public and private keys (encrypted with a passphrase). Users are free to instatiate a ``new'' node identity on every launch, though that loses accrued network benefits. Nodes are incentivized to remain the same.
+Nodes are identified by a \texttt{NodeId}, the cryptographic hash\footnote{Throughout this document, \textit{hash} and \textit{checksum} refer specifically to cryptographic hashes of data.} of a public key, created with S/Kademlia's static crypto puzzle~\cite{baumgart07}. Nodes store their public and private keys (encrypted with a passphrase). Users are free to instatiate a ``new'' node identity on every launch, though that loses accrued network benefits. Nodes are incentivized to remain the same.
 
 \begin{verbatim}
       type NodeId Multihash
@@ -210,13 +211,13 @@ Nodes are identified by a \texttt{NodeId}, the cryptographic hash\footnote{Throu
       // self-describing keys
 
       type Node struct {
-        NodeId NodeID
+        NodeId NodeId
         PubKey PublicKey
-        PriKey PrivateKey
+        PrivKey PrivateKey
       }
 \end{verbatim}
 
-S/Kademlia based IPFS identity generation:
+S/Kademlia-based IPFS identity generation:
 
 \begin{verbatim}
       difficulty = <integer parameter>
@@ -229,7 +230,7 @@ S/Kademlia based IPFS identity generation:
 \end{verbatim}
 
 
-Upon first connecting, peers exchange public keys, and check: \texttt{hash(other.PublicKey) equals other.NodeId}. If not, the connection is terminated.
+Upon first connecting, peers exchange public keys, and check that \texttt{hash(other.PublicKey)} equals \texttt{other.NodeId}. If not, the connection is terminated.
 
 \paragraph{Note on Cryptographic Functions} Rather than locking the system to a particular set of function choices, IPFS favors self-describing values. Hash digest values are stored in \texttt{multihash} format, which includes a short header specifying the hash function used, and the digest length in bytes. Example:
 
@@ -245,16 +246,16 @@ This allows the system to (a) choose the best function for the use case (e.g. st
 IPFS nodes communicate regularly with hundreds of other nodes in the network, potentially across the wide Internet. The IPFS network stack features:
 
 \begin{itemize}
-  \item \textbf{Transport:} IPFS can use any transport protocol, and is best suited for WebRTC DataChannels~\cite{WebRTC} (for browser connectivity) or uTP(LEDBAT~\cite{LEDBAT}).
+  \item \textbf{Transport:} IPFS can use any transport protocol, and is best suited for WebRTC data channels~\cite{WebRTC} (for browser connectivity) or uTP (LEDBAT~\cite{LEDBAT}).
   \item \textbf{Reliability:} IPFS can provide reliability if underlying networks do not provide it, using uTP (LEDBAT~\cite{LEDBAT}) or SCTP~\cite{SCTP}.
-  \item \textbf{Connectivity:} IPFS also uses the ICE NAT traversal techniques \cite{ICE}.
-  \item \textbf{Integrity:} optionally checks integrity of messages using a hash checksum.
-  \item \textbf{Authenticity:} optionally checks authenticity of messages by digitally signing them with the sender's private key.
+  \item \textbf{Connectivity:} IPFS also uses the ICE NAT traversal techniques~\cite{ICE}.
+  \item \textbf{Integrity:} IPFS optionally checks integrity of messages using a hash checksum.
+  \item \textbf{Authenticity:} IPFS optionally checks authenticity of messages by digitally signing them with the sender's private key.
 \end{itemize}
 
 \subsubsection{Note on Peer Addressing}
 
-IPFS can use any network; it does not rely on or assume access to IP. This allows IPFS to be used in overlay networks. IPFS stores addresses as \texttt{multiaddr} formatted byte strings for the underlying network to use. \texttt{multiaddr} provides a way to express addresses and their protocols, including support for encapsulation. For example:
+IPFS can use any network; it does not rely on or assume access to IP. This allows IPFS to be used in overlay networks. IPFS stores addresses as \texttt{multiaddr}-formatted byte strings for the underlying network to use. \texttt{multiaddr} provides a way to express addresses and their protocols, including support for encapsulation. For example:
 
 \begin{verbatim}
   # an SCTP/IPv4 connection
@@ -267,12 +268,11 @@ IPFS can use any network; it does not rely on or assume access to IP. This allow
 \subsection{Routing}
 \label{sec:design-routing}
 
-IPFS nodes require a routing system that can find (a) other peers' network addresses and (b) peers who can serve particular objects. IPFS achieves this using a DSHT based on S/Kademlia and Coral, using the properties discussed in 2.1. The size of objects and use patterns of IPFS are similar to Coral \cite{freedman04} and Mainline~\cite{wang13}, so the IPFS DHT makes a distinction for values stored based on their size. Small values (equal to or less than \texttt{1KB}) are stored directly on the DHT. For larger values, the DHT stores references, which are the \texttt{NodeIds} of peers who can serve the block.
+IPFS nodes require a routing system that can find (a) other peers' network addresses and (b) peers who can serve particular objects. IPFS achieves this using a DSHT based on S/Kademlia and Coral, using the properties discussed in \Cref{sec:bg-dhts}. The size of objects and use patterns of IPFS are similar to Coral~\cite{freedman04} and Mainline~\cite{wang13}, so the IPFS DHT makes a distinction for values stored based on their size. Small values (equal to or less than 1~KiB) are stored directly on the DHT. For larger values, the DHT stores references, which are the \texttt{NodeIds} of peers who can serve the block.
 
 The interface of this DSHT is the following:
 
 \begin{verbatim}
-
   type IPFSRouting interface {
 
     FindPeer(node NodeId)
@@ -292,7 +292,7 @@ The interface of this DSHT is the following:
   }
 \end{verbatim}
 
-Note: different use cases will call for substantially different routing systems (e.g. DHT in wide network, static HT in local network). Thus the IPFS routing system can be swapped for one that fits users' needs. As long as the interface above is met, the rest of the system will continue to function.
+Note: different use cases will call for substantially different routing systems (e.g. DHT in wide networks, static HT in local networks). Thus the IPFS routing system can be swapped for one that fits users' needs. As long as the interface above is met, the rest of the system will continue to function.
 
 \subsection{Block Exchange - BitSwap Protocol}
 \label{sec:design-exchange}
