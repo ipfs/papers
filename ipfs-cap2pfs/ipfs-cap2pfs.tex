@@ -239,7 +239,7 @@ do {
 
 Upon first connecting, peers exchange public keys, and check that \texttt{hash(other.PublicKey)} equals \texttt{other.NodeId}. If not, the connection is terminated.
 
-\paragraph{Note on Cryptographic Functions} Rather than locking the system to a particular set of function choices, IPFS favors self-describing values. Hash digest values are stored in \texttt{multihash} format, which includes a short header specifying the hash function used, and the digest length in bytes. Example:
+\paragraph{Note on Cryptographic Functions} Rather than locking the system to a particular set of function choices, IPFS favors self-describing values. Hash digest values are stored in \texttt{multihash} format, which includes a short header specifying the hash function used, and the digest length in bytes:
 
 \begin{quote}
 \begin{verbatim}
@@ -1070,7 +1070,7 @@ routing.setValue(NodeId, <ns-object-hash>)
 /ipns/XLF2ipQ4jD3UdeX5xp1KBgeHRhemUtaA8Vm/docs/ipfs
 \end{verbatim}
 
-  \item it is advised to publish a \texttt{commit} object, or some other object with a version history, so that clients may be able to find old names. This is left as a user option, as it is not always desired.
+  \item It is advised to publish a \texttt{commit} object, or some other object with a version history, so that clients may be able to find old names. This is left as a user option, as it is not always desired.
 
 \end{itemize}
 
