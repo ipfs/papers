@@ -155,15 +155,19 @@ Version Control Systems provide facilities to model files changing over time and
 
 SFS~\cite{mazieres98, mazieres00} proposed compelling implementations of both (a) distributed trust chains, and (b) egalitarian shared global namespaces. SFS introduced a technique for building \textit{Self-Certified Filesystems}, addressing remote filesystems using the following scheme:
 
+\begin{quote}
 \begin{verbatim}
-      /sfs/<Location>:<HostID>
+/sfs/<Location>:<HostID>
 \end{verbatim}
+\end{quote}
 
 \noindent where \texttt{Location} is the server network address, and:
 
+\begin{quote}
 \begin{verbatim}
-      HostID = hash(public_key || Location)
+HostID = hash(public_key || Location)
 \end{verbatim}
+\end{quote}
 
 Thus the \textit{name} of an SFS file system certifies its server. The user can verify the public key offered by the server, negotiate a shared secret, and secure all traffic. All SFS instances share a global namespace where name allocation is cryptographic, not gated by any centralized body.
 
@@ -201,42 +205,47 @@ Notation: data structures and functions below are specified in Go syntax.
 
 Nodes are identified by a \texttt{NodeId}, the cryptographic hash\footnote{Throughout this document, \textit{hash} and \textit{checksum} refer specifically to cryptographic hashes of data.} of a public key, created with S/Kademlia's static crypto puzzle~\cite{baumgart07}. Nodes store their public and private keys (encrypted with a passphrase). Users are free to instatiate a ``new'' node identity on every launch, though that loses accrued network benefits. Nodes are incentivized to remain the same.
 
+\begin{quote}
 \begin{verbatim}
-      type NodeId Multihash
-      type Multihash []byte
-      // self-describing cryptographic hash digest
+type NodeId Multihash
+type Multihash []byte
+// self-describing cryptographic hash digest
 
-      type PublicKey []byte
-      type PrivateKey []byte
-      // self-describing keys
+type PublicKey []byte
+type PrivateKey []byte
+// self-describing keys
 
-      type Node struct {
-        NodeId NodeId
-        PubKey PublicKey
-        PrivKey PrivateKey
-      }
+type Node struct {
+  NodeId NodeId
+  PubKey PublicKey
+  PrivKey PrivateKey
+}
 \end{verbatim}
+\end{quote}
 
 S/Kademlia-based IPFS identity generation:
 
+\begin{quote}
 \begin{verbatim}
-      difficulty = <integer parameter>
-      n = Node{}
-      do {
-        n.PubKey, n.PrivKey = PKI.genKeyPair()
-        n.NodeId = hash(n.PubKey)
-        p = count_preceding_zero_bits(hash(n.NodeId))
-      } while (p < difficulty)
+difficulty = <integer parameter>
+n = Node{}
+do {
+  n.PubKey, n.PrivKey = PKI.genKeyPair()
+  n.NodeId = hash(n.PubKey)
+  p = count_preceding_zero_bits(hash(n.NodeId))
+} while (p < difficulty)
 \end{verbatim}
-
+\end{quote}
 
 Upon first connecting, peers exchange public keys, and check that \texttt{hash(other.PublicKey)} equals \texttt{other.NodeId}. If not, the connection is terminated.
 
 \paragraph{Note on Cryptographic Functions} Rather than locking the system to a particular set of function choices, IPFS favors self-describing values. Hash digest values are stored in \texttt{multihash} format, which includes a short header specifying the hash function used, and the digest length in bytes. Example:
 
+\begin{quote}
 \begin{verbatim}
-    <function code><digest length><digest bytes>
+<function code><digest length><digest bytes>
 \end{verbatim}
+\end{quote}
 
 This allows the system to (a) choose the best function for the use case (e.g. stronger security vs faster performance), and (b) evolve as function choices change. Self-describing values allow using different parameter choices compatibly.
 
@@ -257,13 +266,15 @@ IPFS nodes communicate regularly with hundreds of other nodes in the network, po
 
 IPFS can use any network; it does not rely on or assume access to IP. This allows IPFS to be used in overlay networks. IPFS stores addresses as \texttt{multiaddr}-formatted byte strings for the underlying network to use. \texttt{multiaddr} provides a way to express addresses and their protocols, including support for encapsulation. For example:
 
+\begin{quote}
 \begin{verbatim}
-  # an SCTP/IPv4 connection
-  /ip4/10.20.30.40/sctp/1234/
+# an SCTP/IPv4 connection
+/ip4/10.20.30.40/sctp/1234/
 
-  # an SCTP/IPv4 connection proxied over TCP/IPv4
-  /ip4/5.6.7.8/tcp/5678/ip4/1.2.3.4/sctp/1234/
+# an SCTP/IPv4 connection proxied over TCP/IPv4
+/ip4/5.6.7.8/tcp/5678/ip4/1.2.3.4/sctp/1234/
 \end{verbatim}
+\end{quote}
 
 \subsection{Routing}
 \label{sec:design-routing}
@@ -272,25 +283,27 @@ IPFS nodes require a routing system that can find (a) other peers' network addre
 
 The interface of this DSHT is the following:
 
+\begin{quote}
 \begin{verbatim}
-  type IPFSRouting interface {
+type IPFSRouting interface {
 
-    FindPeer(node NodeId)
-    // gets a particular peer's network address
+  FindPeer(node NodeId)
+  // gets a particular peer's network address
 
-    SetValue(key []bytes, value []bytes)
-    // stores a small metadata value in DHT
+  SetValue(key []bytes, value []bytes)
+  // stores a small metadata value in DHT
 
-    GetValue(key []bytes)
-    // retrieves small metadata value from DHT
+  GetValue(key []bytes)
+  // retrieves small metadata value from DHT
 
-    ProvideValue(key Multihash)
-    // announces this node can serve a large value
+  ProvideValue(key Multihash)
+  // announces this node can serve a large value
 
-    FindValuePeers(key Multihash, min int)
-    // gets a number of peers serving a large value
-  }
+  FindValuePeers(key Multihash, min int)
+  // gets a number of peers serving a large value
+}
 \end{verbatim}
+\end{quote}
 
 Note: different use cases will call for substantially different routing systems (e.g. DHT in wide networks, static HT in local networks). Thus the IPFS routing system can be swapped for one that fits users' needs. As long as the interface above is met, the rest of the system will continue to function.
 
@@ -422,15 +435,17 @@ improve.
 
 BitSwap nodes keep ledgers accounting the transfers with other nodes. This allows nodes to keep track of history and avoid tampering. When activating a connection, BitSwap nodes exchange their ledger information. If it does not match exactly, the ledger is reinitialized from scratch, losing the accrued credit or debt.  It is possible for malicious nodes to purposefully ``lose'' the Ledger, hoping to erase debts. It is unlikely that nodes will have accrued enough debt to warrant also losing the accrued trust; however the partner node is free to count it as misconduct, and refuse to trade.
 
+\begin{quote}
 \begin{verbatim}
-      type Ledger struct {
-        owner      NodeId
-        partner    NodeId
-        bytes_sent int
-        bytes_recv int
-        timestamp  Timestamp
-      }
+type Ledger struct {
+  owner      NodeId
+  partner    NodeId
+  bytes_sent int
+  bytes_recv int
+  timestamp  Timestamp
+}
 \end{verbatim}
+\end{quote}
 
 Nodes are free to keep the ledger history, though it is not necessary for
 correct operation. Only the current ledger entries are useful. Nodes are
@@ -441,43 +456,45 @@ useful ledgers: the old (peers may not exist anymore) and small.
 
 BitSwap nodes follow a simple protocol.
 
+\begin{quote}
 \begin{verbatim}
-    // Additional state kept
-    type BitSwap struct {
-      ledgers map[NodeId]Ledger
-      // Ledgers known to this node, inc inactive
+// Additional state kept
+type BitSwap struct {
+  ledgers map[NodeId]Ledger
+  // Ledgers known to this node, inc inactive
 
-      active map[NodeId]Peer
-      // currently open connections to other nodes
+  active map[NodeId]Peer
+  // currently open connections to other nodes
 
-      need_list []Multihash
-      // checksums of blocks this node needs
+  need_list []Multihash
+  // checksums of blocks this node needs
 
-      have_list []Multihash
-      // checksums of blocks this node has
-    }
+  have_list []Multihash
+  // checksums of blocks this node has
+}
 
-    type Peer struct {
-      nodeid NodeId
-      ledger Ledger
-      // Ledger between the node and this peer
+type Peer struct {
+  nodeid NodeId
+  ledger Ledger
+  // Ledger between the node and this peer
 
-      last_seen Timestamp
-      // timestamp of last received message
+  last_seen Timestamp
+  // timestamp of last received message
 
-      want_list []Multihash
-      // checksums of all blocks wanted by peer
-      // includes blocks wanted by peer's peers
-    }
+  want_list []Multihash
+  // checksums of all blocks wanted by peer
+  // includes blocks wanted by peer's peers
+}
 
-    // Protocol interface:
-    interface Peer {
-      open (nodeid :NodeId, ledger :Ledger);
-      send_want_list (want_list :WantList);
-      send_block (block :Block) -> (complete :Bool);
-      close (final :Bool);
-    }
+// Protocol interface:
+interface Peer {
+  open (nodeid :NodeId, ledger :Ledger);
+  send_want_list (want_list :WantList);
+  send_block (block :Block) -> (complete :Bool);
+  close (final :Bool);
+}
 \end{verbatim}
+\end{quote}
 
 
 Sketch of the lifetime of a peer connection:
@@ -588,28 +605,28 @@ The DHT and BitSwap allow IPFS to form a massive peer-to-peer system for storing
 
 The IPFS Object format is:
 
+\begin{quote}
 \begin{verbatim}
+type IPFSLink struct {
+  Name string
+  // name or alias of this link
 
-    type IPFSLink struct {
-      Name string
-      // name or alias of this link
+  Hash Multihash
+  // cryptographic hash of target
 
-      Hash Multihash
-      // cryptographic hash of target
+  Size int
+  // total size of target
+}
 
-      Size int
-      // total size of target
-    }
+type IPFSObject struct {
+  links []IPFSLink
+  // array of links
 
-    type IPFSObject struct {
-      links []IPFSLink
-      // array of links
-
-      data []byte
-      // opaque content data
-    }
-
+  data []byte
+  // opaque content data
+}
 \end{verbatim}
+\end{quote}
 
 
 The IPFS Merkle DAG is an extremely flexible way to store data. The only requirements are that object references be (a) content-addressed, and (b) encoded in the format above. IPFS grants applications complete control over the data field; applications can use any custom data format they chose, which IPFS may not understand. The separate in-object link table allows IPFS to:
@@ -655,21 +672,25 @@ These can all be modeled on top of the IPFS Merkle DAG, which allows any of thes
 
 IPFS objects can be traversed with a string path API. Paths work as they do in traditional UNIX filesystems and the Web. The Merkle DAG links make traversing it easy. Note that full paths in IPFS are of the form:
 
+\begin{quote}
 \begin{verbatim}
-  # format
-  /ipfs/<hash-of-object>/<name-path-to-object>
+# format
+/ipfs/<hash-of-object>/<name-path-to-object>
 
-  # example
-  /ipfs/XLYkgq61DYaQ8NhkcqyU7rLcnSa7dSHQ16x/foo.txt
+# example
+/ipfs/XLYkgq61DYaQ8NhkcqyU7rLcnSa7dSHQ16x/foo.txt
 \end{verbatim}
+\end{quote}
 
 The \texttt{/ipfs} prefix allows mounting into existing systems at a standard mount point without conflict (mount point names are of course configurable). The second path component (first within IPFS) is the hash of an object. This is always the case, as there is no global root. A root object would have the impossible task of handling consistency of millions of objects in a distributed (and possibly disconnected) environment. Instead, we simulate the root with content addressing. All objects are always accessible via their hash. Note this means that given three objects in path \texttt{<foo>/bar/baz}, the last object is accessible by all:
 
+\begin{quote}
 \begin{verbatim}
-    /ipfs/<hash-of-foo>/bar/baz
-    /ipfs/<hash-of-bar>/baz
-    /ipfs/<hash-of-baz>
+/ipfs/<hash-of-foo>/bar/baz
+/ipfs/<hash-of-bar>/baz
+/ipfs/<hash-of-baz>
 \end{verbatim}
+\end{quote}
 
 \subsubsection{Local Objects}
 
@@ -705,26 +726,28 @@ IPFS is globally distributed. It is designed to allow the files of millions of u
 
 IPFS is equipped to handle object-level cryptographic operations. An encrypted or signed object is wrapped in a special frame that allows encryption or verification of the raw bytes.
 
+\begin{quote}
 \begin{verbatim}
-    type EncryptedObject struct {
-      Object []bytes
-      // raw object data encrypted
+type EncryptedObject struct {
+  Object []bytes
+  // raw object data encrypted
 
-      Tag []bytes
-      // optional tag for encryption groups
-    }
+  Tag []bytes
+  // optional tag for encryption groups
+}
 
-    type SignedObject struct {
-      Object []bytes
-      // raw object data signed
+type SignedObject struct {
+  Object []bytes
+  // raw object data signed
 
-      Signature []bytes
-      // hmac signature
+  Signature []bytes
+  // hmac signature
 
-      PublicKey []multihash
-      // multihash identifying key
-    }
+  PublicKey []multihash
+  // multihash identifying key
+}
 \end{verbatim}
+\end{quote}
 
 Cryptographic operations change the object's hash, defining a different object. IPFS automatically verifies signatures, and can decrypt data with user-specified keychains. Links of encrypted objects are protected as well, making traversal impossible without a decryption key. It is possible to have a parent object encrypted under one key, and a child under another or not at all. This secures links to shared objects.
 
@@ -824,41 +847,41 @@ indirect blocks. Since \texttt{lists} can contain other \texttt{lists}, topologi
 \caption{Sample Object Graph} \label{fig:sample-object-graph}
 
 \begin{verbatim}
-    > ipfs file-cat <ccc111-hash> --json
-    {
-      "data": {
-        "type": "tree",
-        "date": "2014-09-20 12:44:06Z",
-        "message": "This is a commit message."
-      },
-      "links": [
-        { "hash": "<ccc000-hash>",
-          "name": "parent", "size": 25309 },
-        { "hash": "<ttt111-hash>",
-          "name": "object", "size": 5198 },
-        { "hash": "<aaa111-hash>",
-          "name": "author", "size": 109 }
-      ]
-    }
+> ipfs file-cat <ccc111-hash> --json
+{
+  "data": {
+    "type": "tree",
+    "date": "2014-09-20 12:44:06Z",
+    "message": "This is a commit message."
+  },
+  "links": [
+    { "hash": "<ccc000-hash>",
+      "name": "parent", "size": 25309 },
+    { "hash": "<ttt111-hash>",
+      "name": "object", "size": 5198 },
+    { "hash": "<aaa111-hash>",
+      "name": "author", "size": 109 }
+  ]
+}
 
-    > ipfs file-cat <ttt111-hash> --json
-    {
-      "data": nil,
-      "links": [
-        { "hash": "<ttt222-hash>",
-          "name": "ttt222-name", "size": 1234 },
-        { "hash": "<ttt333-hash>",
-          "name": "ttt333-name", "size": 3456 },
-        { "hash": "<bbb222-hash>",
-          "name": "bbb222-name", "size": 22 }
-      ]
-    }
+> ipfs file-cat <ttt111-hash> --json
+{
+  "data": nil,
+  "links": [
+    { "hash": "<ttt222-hash>",
+      "name": "ttt222-name", "size": 1234 },
+    { "hash": "<ttt333-hash>",
+      "name": "ttt333-name", "size": 3456 },
+    { "hash": "<bbb222-hash>",
+      "name": "bbb222-name", "size": 22 }
+  ]
+}
 
-    > ipfs file-cat <bbb222-hash> --json
-    {
-      "data": "blob222 data",
-      "links": []
-    }
+> ipfs file-cat <bbb222-hash> --json
+{
+  "data": "blob222 data",
+  "links": []
+}
 \end{verbatim}
 \caption{Sample Objects} \label{fig:sample-objects}
 \end{figure}
@@ -1074,38 +1097,44 @@ If \texttt{/ipns/<domain>} is a valid domain name, IPFS
 looks up key \texttt{ipns} in its \texttt{DNS TXT} records. IPFS
 interprets the value as either an object hash or another IPNS path:
 
+\begin{quote}
 \begin{verbatim}
-    # this DNS TXT record
-    ipfs.benet.ai. TXT "ipfs=XLF2ipQ4jD3U ..."
+# this DNS TXT record
+ipfs.benet.ai. TXT "ipfs=XLF2ipQ4jD3U ..."
 
-    # behaves as symlink
-    ln -s /ipns/XLF2ipQ4jD3U /ipns/fs.benet.ai
+# behaves as symlink
+ln -s /ipns/XLF2ipQ4jD3U /ipns/fs.benet.ai
 \end{verbatim}
+\end{quote}
 
 
 \paragraph{Proquint Pronounceable Identifiers}
 
 There have always been schemes to encode binary into pronounceable words. IPNS supports Proquint \cite{Proquint}. Thus:
 
+\begin{quote}
 \begin{verbatim}
-    # this proquint phrase
-    /ipns/dahih-dolij-sozuk-vosah-luvar-fuluh
+# this proquint phrase
+/ipns/dahih-dolij-sozuk-vosah-luvar-fuluh
 
-    # will resolve to corresponding
-    /ipns/KhAwNprxYVxKqpDZ
+# will resolve to corresponding
+/ipns/KhAwNprxYVxKqpDZ
 \end{verbatim}
+\end{quote}
 
 \paragraph{Name Shortening Services}
 
 Services are bound to spring up that will provide name shortening as a service, offering up their namespaces to users. This is similar to what we see today with DNS and Web URLs:
 
+\begin{quote}
 \begin{verbatim}
-    # User can get a link from
-    /ipns/shorten.er/foobar
+# User can get a link from
+/ipns/shorten.er/foobar
 
-    # To her own namespace
-    /ipns/XLF2ipQ4jD3UdeX5xp1KBgeHRhemUtaA8Vm
+# To her own namespace
+/ipns/XLF2ipQ4jD3UdeX5xp1KBgeHRhemUtaA8Vm
 \end{verbatim}
+\end{quote}
 
 \subsection{Using IPFS}
 
