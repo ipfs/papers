@@ -773,12 +773,14 @@ Notation: File object formats below use JSON. Note that this structure is actual
 The \texttt{blob} object contains an addressable unit of data, and
 represents a file. IPFS Blocks are like Git blobs or filesystem data blocks. They store the users' data. Note that IPFS files can be represented by both \texttt{lists} and \texttt{blobs}. Blobs have no links.
 
+\begin{quote}
 \begin{verbatim}
 {
   "data": "some data here"
   // blobs have no links
 }
 \end{verbatim}
+\end{quote}
 
 \subsubsection{File Object: \texttt{list}}
 
@@ -788,6 +790,7 @@ an ordered sequence of \texttt{blob} or \texttt{list} objects.
 In a sense, the IPFS \texttt{list} functions like a filesystem file with
 indirect blocks. Since \texttt{lists} can contain other \texttt{lists}, topologies including linked lists and balanced trees are possible. Directed graphs where the same node appears in multiple places allow in-file deduplication. Of course, cycles are not possible, as enforced by hash addressing.
 
+\begin{quote}
 \begin{verbatim}
 {
   "data": ["blob", "list", "blob"],
@@ -803,6 +806,7 @@ indirect blocks. Since \texttt{lists} can contain other \texttt{lists}, topologi
   ]
 }
 \end{verbatim}
+\end{quote}
 
 
 \begin{figure}
@@ -892,6 +896,7 @@ indirect blocks. Since \texttt{lists} can contain other \texttt{lists}, topologi
 The \texttt{tree} object in IPFS is similar to Git's: it represents a
 directory, a map of names to hashes. The hashes reference \texttt{blobs}, \texttt{lists}, other \texttt{trees}, or \texttt{commits}. Note that traditional path naming is already implemented by the Merkle DAG.
 
+\begin{quote}
 \begin{verbatim}
 {
   "data": nil,
@@ -907,12 +912,14 @@ directory, a map of names to hashes. The hashes reference \texttt{blobs}, \textt
   ]
 }
 \end{verbatim}
+\end{quote}
 
 
 \subsubsection{File Object: \texttt{commit}}
 
 The \texttt{commit} object in IPFS represents a snapshot in the version history of any object. It is similar to Git's, but can reference any type of object. It also links to author objects.
 
+\begin{quote}
 \begin{verbatim}
 {
   "data": {
@@ -930,6 +937,7 @@ The \texttt{commit} object in IPFS represents a snapshot in the version history 
   ]
 }
 \end{verbatim}
+\end{quote}
 
 \subsubsection{Version control}
 
@@ -978,6 +986,7 @@ This is mitigated by:
 
 For example, \texttt{flattened tree} for \texttt{ttt111} above:
 
+\begin{quote}
 \begin{verbatim}
 {
 "data":
@@ -997,6 +1006,7 @@ For example, \texttt{flattened tree} for \texttt{ttt111} above:
     "name": "bbb222-name" }
 ] }
 \end{verbatim}
+\end{quote}
 
 
 \subsection{IPNS: Naming and Mutable State}
@@ -1076,6 +1086,7 @@ While IPNS is indeed a way of assigning and reassigning names, it is not very us
 
 As encouraged by SFS, users can link other users' Objects directly into their own Objects (namespace, home, etc). This has the benefit of also creating a web of trust (and supports the old Certificate Authority model):
 
+\begin{quote}
 \begin{verbatim}
 # Alice links to bob Bob
 ipfs link /<alice-pk-hash>/friends/bob /<bob-pk-hash>
@@ -1089,6 +1100,7 @@ ipfs link /<eve-pk-hash/friends/alice /<alice-pk-hash>
 # access Verisign certified domains
 /<verisign-pk-hash>/foo.com
 \end{verbatim}
+\end{quote}
 
 
 \paragraph{DNS TXT IPNS Records}
