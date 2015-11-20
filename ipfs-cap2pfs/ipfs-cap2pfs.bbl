@@ -34,7 +34,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Parallel and Distributed Systems, 2007 International Conference on}
-      \field{title}{S/kademlia: A practicable approach towards secure key-based routing}
+      \field{title}{{S/Kademlia}: A practicable approach towards secure key-based routing}
       \field{volume}{2}
       \field{year}{2007}
       \field{pages}{1\bibrangedash 8}
@@ -215,7 +215,7 @@
       \field{labeltitlesource}{title}
       \field{booktitle}{ACM SIGCOMM Computer Communication Review}
       \field{number}{4}
-      \field{title}{Bittorrent is an auction: analyzing and improving bittorrent's incentives}
+      \field{title}{{BitTorrent} is an auction: analyzing and improving {BitTorrent}'s incentives}
       \field{volume}{38}
       \field{year}{2008}
       \field{pages}{243\bibrangedash 254}
@@ -300,6 +300,30 @@
       \field{pages}{118\bibrangedash 125}
       \range{pages}{8}
     \endentry
+    \entry{WebRTC}{report}{}
+      \name{author}{4}{}{%
+        {{hash=f3a972f98579c8c7dc759d18c35d01c5}{Narayanan}{N\bibinitperiod}{Anant}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=6ec10d8f26f4d082a049a9e605d73b99}{Jennings}{J\bibinitperiod}{Cullen}{C\bibinitperiod}{}{}{}{}}%
+        {{hash=e3fc3deeb08ccdeddb6a6c6d1fd14bf2}{Bergkvist}{B\bibinitperiod}{Adam}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=5dfb8d044989b31e30f9cf39d91b9ee0}{Burnett}{B\bibinitperiod}{Daniel}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \list{institution}{1}{%
+        {W3C}%
+      }
+      \strng{namehash}{2a0871b7c6e5ddf1f6c2631425f1cf65}
+      \strng{fullhash}{2a0871b7c6e5ddf1f6c2631425f1cf65}
+      \field{sortinit}{N}
+      \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{09}
+      \field{title}{{WebRTC} 1.0: Real-time Communication Between Browsers}
+      \field{type}{{W3C} Working Draft}
+      \field{year}{2013}
+      \verb{url}
+      \verb http://www.w3.org/TR/2013/WD-webrtc-20130910/
+      \endverb
+    \endentry
     \entry{Dat}{online}{}
       \name{author}{1}{}{%
         {{hash=e856ccc06edc669a0ee4e98decb88cc5}{Ogden}{O\bibinitperiod}{Max}{M\bibinitperiod}{}{}{}{}}%
@@ -326,7 +350,7 @@
       \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Interactive connectivity establishment (ice): A protocol for network address translator (nat) traversal for offer/answer protocols}
+      \field{title}{{Interactive Connectivity Establishment} ({ICE}): A protocol for {Network Address Translator} ({NAT}) traversal for offer/answer protocols}
       \field{year}{2013}
     \endentry
     \entry{LEDBAT}{article}{}
@@ -377,22 +401,21 @@
       \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Peer-to-Peer Computing (P2P), 2013 IEEE Thirteenth International Conference on}
+      \field{booktitle}{Peer-to-Peer Computing ({P2P}), 2013 {IEEE} Thirteenth International Conference on}
       \field{title}{Measuring large-scale distributed systems: case of {BitTorrent Mainline DHT}}
       \field{year}{2013}
       \field{pages}{1\bibrangedash 10}
       \range{pages}{10}
     \endentry
   \endsortlist
-  \missing{LBFS}
-  \missing{FUSE}
-  \missing{WebRTC}
-  \missing{RabinFingerprints}
-  \missing{rsync}
-  \missing{Plan9}
-  \missing{Fossil}
   \missing{Venti}
+  \missing{FUSE}
+  \missing{LBFS}
+  \missing{Fossil}
+  \missing{Plan9}
+  \missing{RabinFingerprints}
   \missing{Proquint}
+  \missing{rsync}
 \endrefsection
 \endinput
 

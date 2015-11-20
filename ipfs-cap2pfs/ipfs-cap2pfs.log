@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2015.10.18)  10 NOV 2015 13:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2015.11.18)  20 NOV 2015 12:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **ipfs-cap2pfs.tex
 (./ipfs-cap2pfs.tex
-LaTeX2e <2015/10/01> patch level 1
+LaTeX2e <2015/10/01> patch level 2
 Babel <3.9m> and hyphenation patterns for 2 languages loaded.
 (./sig-alternate.cls
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
@@ -487,7 +487,7 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \backup@length=\skip45
 )
 (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
-Package: mathtools 2015/06/17 v1.17 mathematical typesetting tools
+Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
@@ -520,10 +520,10 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_below_shortintertext_sep=\dimen180
 )
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
-Package: biblatex 2015/04/19 v3.0 programmable bibliographies (PK/JW/AB)
+Package: biblatex 2015/10/21 v3.1 programmable bibliographies (PK/JW/AB)
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex2.sty
-Package: biblatex2 2015/04/19 v3.0 programmable bibliographies (biber) (PK/JW/A
+Package: biblatex2 2015/10/21 v3.1 programmable bibliographies (biber) (PK/JW/A
 B)
 
 (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
@@ -697,7 +697,7 @@ Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
-File: blx-compat.def 2015/04/19 v3.0 biblatex compatibility (PK/JW/AB)
+File: blx-compat.def 2015/10/21 v3.1 biblatex compatibility (PK/JW/AB)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
@@ -729,7 +729,7 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
-File: standard.bbx 2015/04/19 v3.0 biblatex bibliography style (PK/JW/AB)
+File: standard.bbx 2015/10/21 v3.1 biblatex bibliography style (PK/JW/AB)
 \c@bbx:relatedcount=\count314
 \c@bbx:relatedtotal=\count315
 )))
@@ -742,7 +742,7 @@ Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
-File: numeric.cbx 2015/04/19 v3.0 biblatex citation style (PK/JW/AB)
+File: numeric.cbx 2015/10/21 v3.1 biblatex citation style (PK/JW/AB)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -761,11 +761,14 @@ Package biblatex Info: ... file 'biblatex.cfg' found.
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
 )))
+(/usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty
+Package: cleveref 2013/12/28 v0.19 Intelligent cross-referencing
+)
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
-File: english.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
+File: english.lbx 2015/10/21 v3.1 biblatex localization (PK/JW/AB)
 )
 \@quotelevel=\count316
 \@quotereset=\count317
@@ -773,18 +776,18 @@ File: english.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
 (./ipfs-cap2pfs.aux)
 \openout1 = `ipfs-cap2pfs.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -843,7 +846,7 @@ Package biblatex Info: ... file 'ipfs-cap2pfs.bbl' found.
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                LBFS
+(biblatex)                Venti
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -857,28 +860,7 @@ Package biblatex Warning: The following entry could not be found
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                WebRTC
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                RabinFingerprints
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                rsync
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Plan9
+(biblatex)                LBFS
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -892,7 +874,14 @@ Package biblatex Warning: The following entry could not be found
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Venti
+(biblatex)                Plan9
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                RabinFingerprints
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -903,19 +892,26 @@ Package biblatex Warning: The following entry could not be found
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                rsync
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
 )
-Package biblatex Info: Reference section=0 on input line 17.
-Package biblatex Info: Reference segment=0 on input line 17.
-LaTeX Font Info:    Try loading font information for U+msa on input line 30.
+Package biblatex Info: Reference section=0 on input line 19.
+Package biblatex Info: Reference segment=0 on input line 19.
+LaTeX Font Info:    Try loading font information for U+msa on input line 32.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 30.
+LaTeX Font Info:    Try loading font information for U+msb on input line 32.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 30.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 32.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
@@ -923,45 +919,63 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 
 
 ]
-LaTeX Font Info:    Try loading font information for T1+aett on input line 92.
+Overfull \hbox (3.0741pt too wide) in paragraph at lines 73--75
+[]\T1/aer/m/n/9 Wide us-age in peer-to-peer ap-pli-ca-tions, in-clud-ing Gnu-
+ []
 
+LaTeX Font Info:    Try loading font information for T1+aett on input line 95.
 (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-Overfull \hbox (3.61647pt too wide) in paragraph at lines 99--104
+Overfull \hbox (3.61647pt too wide) in paragraph at lines 102--107
 \T1/aer/m/n/9 ``find-ing nearby data with-out query-ing dis-tant nodes'' [7]
  []
 
 
-Overfull \hbox (11.16713pt too wide) in paragraph at lines 132--134
+Overfull \hbox (11.16713pt too wide) in paragraph at lines 135--137
 \T1/aer/m/n/9 ex-ploita-tive band-width shar-ing strate-gies. Prop-Share [10]
  []
 
 
-Overfull \hbox (4.33636pt too wide) in paragraph at lines 139--140
+Overfull \hbox (4.33636pt too wide) in paragraph at lines 142--143
 \T1/aer/m/n/9 chang-ing over time and dis-tribute dif-fer-ent ver-sions ef-fi-c
 iently.
  []
 
 [2]
-Overfull \hbox (1.62833pt too wide) in paragraph at lines 180--181
+Overfull \hbox (1.62833pt too wide) in paragraph at lines 187--188
 []\T1/aer/bx/n/9 Exchange \T1/aer/m/n/9 - a novel block ex-change pro-to-col (B
 itSwap)
  []
 
 
-Underfull \hbox (badness 1132) in paragraph at lines 198--198
+Underfull \hbox (badness 1132) in paragraph at lines 206--206
 [][]\T1/aer/m/n/9 Throughout this doc-u-ment, \T1/aer/m/it/9 hash \T1/aer/m/n/9
  and \T1/aer/m/it/9 check-sum \T1/aer/m/n/9 re-fer
  []
 
 
-Overfull \hbox (9.94414pt too wide) in paragraph at lines 226--226
-[]        \T1/aett/m/n/9 p = count_preceding_zero_bits(hash(n.NodeId))[] 
+Overfull \hbox (4.14857pt too wide) in paragraph at lines 237--237
+ []  \T1/aett/m/n/9 p = count_preceding_zero_bits(hash(n.NodeId))[] 
  []
 
 [3]
-Overfull \hbox (2.86789pt too wide) in paragraph at lines 342--344
+Overfull \hbox (4.14857pt too wide) in paragraph at lines 276--276
+ []\T1/aett/m/n/9 # an SCTP/IPv4 connection proxied over TCP/IPv4[] 
+ []
+
+
+Overfull \hbox (8.8645pt too wide) in paragraph at lines 305--305
+ []  \T1/aett/m/n/9 // announces this node can serve a large value[] 
+ []
+
+
+Overfull \hbox (13.58043pt too wide) in paragraph at lines 305--305
+ []  \T1/aett/m/n/9 // gets a number of peers serving a large value[] 
+ []
+
+
+Overfull \hbox (2.86789pt too wide) in paragraph at lines 361--363
 []\T1/aer/m/n/9 be ef-fec-tive with and re-sis-tant to other, un-known strate-
  []
 
@@ -971,71 +985,81 @@ runsystem(gnuplot ipfs-cap2pfs.pgf-plot.gnuplot)...disabled (restricted).
 
 
 Package pgf Warning: Plot data file `ipfs-cap2pfs.pgf-plot.table' not found. on
- input line 373.
+ input line 392.
 
 
-Overfull \hbox (1.67198pt too wide) in paragraph at lines 380--391
+Overfull \hbox (1.67198pt too wide) in paragraph at lines 399--410
 \T1/aer/m/n/9 as the nodes' \T1/aer/m/it/9 debt ra-tio \T1/aer/m/n/9 sur-passes
  twice the es-tab-lished credit.
  []
 
 [4]
-Overfull \hbox (5.22821pt too wide) in paragraph at lines 474--474
-[]      \T1/aett/m/n/9 send_block (block :Block) -> (complete :Bool);[] 
+Overfull \hbox (8.8645pt too wide) in paragraph at lines 496--496
+ []  \T1/aett/m/n/9 send_block (block :Block) -> (complete :Bool);[] 
  []
 
 
-Overfull \hbox (4.7758pt too wide) in paragraph at lines 500--506
+Overfull \hbox (4.7758pt too wide) in paragraph at lines 523--529
 \T1/aett/m/n/9 last_seen \T1/aer/m/n/9 times-tamp. Then, it com-pares the re-ce
 ived \T1/aett/m/n/9 Ledger
  []
 
 
-Overfull \hbox (13.81113pt too wide) in paragraph at lines 510--514
+Overfull \hbox (13.81113pt too wide) in paragraph at lines 533--537
 []\T1/aer/m/n/9 While the con-nec-tion is open, nodes ad-ver-tise their \T1/aet
 t/m/n/9 want_list
  []
 
 [5]
-Overfull \hbox (4.14857pt too wide) in paragraph at lines 620--620
+Overfull \hbox (4.14857pt too wide) in paragraph at lines 644--644
  []\T1/aett/m/n/9 XLYkgq61DYaQ8NhkcqyU7rLcnSa7dSHQ16x 189458 less[] 
  []
 
 
-Overfull \hbox (8.8645pt too wide) in paragraph at lines 620--620
+Overfull \hbox (8.8645pt too wide) in paragraph at lines 644--644
  []\T1/aett/m/n/9 XLHBNmRQ5sJJrdMPuu48pzeyTtRo39tNDR5 19441 script[] 
  []
 
 
-Overfull \hbox (13.58043pt too wide) in paragraph at lines 620--620
+Overfull \hbox (13.58043pt too wide) in paragraph at lines 644--644
  []\T1/aett/m/n/9 XLF4hwVHsVuZ78FZK6fozf8Jj9WEURMbCX4 5286 template[] 
  []
 
 
-Overfull \hbox (8.43875pt too wide) in paragraph at lines 622--623
+Overfull \hbox (8.43875pt too wide) in paragraph at lines 646--647
 []\T1/aer/m/n/9 Resolve string path lookups, such as \T1/aett/m/n/9 foo/bar/baz
 \T1/aer/m/n/9 . Given
  []
 
-[6] [7]
-Overfull \hbox (1.43738pt too wide) in paragraph at lines 754--759
+[6]
+Overfull \hbox (13.58043pt too wide) in paragraph at lines 682--682
+ []\T1/aett/m/n/9 /ipfs/XLYkgq61DYaQ8NhkcqyU7rLcnSa7dSHQ16x/foo.txt[] 
+ []
+
+[7]
+Overfull \hbox (1.43738pt too wide) in paragraph at lines 787--792
 \T1/aer/m/n/9 made up of sev-eral IPFS \T1/aett/m/n/9 blobs \T1/aer/m/n/9 con-c
 ate-nated to-gether. \T1/aett/m/n/9 lists
  []
 
 
-Overfull \hbox (5.22821pt too wide) in paragraph at lines 774--774
-[]    \T1/aett/m/n/9 { "hash": "XLYkgq61DYaQ8NhkcqyU7rLcnSa7dSHQ16x",[] 
+Overfull \hbox (18.29636pt too wide) in paragraph at lines 808--808
+ []    \T1/aett/m/n/9 // lists have an array of object types as data[] 
  []
 
 
-Overfull \hbox (5.22821pt too wide) in paragraph at lines 774--774
-[]    \T1/aett/m/n/9 { "hash": "XLHBNmRQ5sJJrdMPuu48pzeyTtRo39tNDR5",[] 
+Overfull \hbox (27.72821pt too wide) in paragraph at lines 808--808
+ []    \T1/aett/m/n/9 { "hash": "XLYkgq61DYaQ8NhkcqyU7rLcnSa7dSHQ16x",[] 
  []
 
 
-Overfull \hbox (5.22821pt too wide) in paragraph at lines 774--774
-[]    \T1/aett/m/n/9 { "hash": "XLWVQDqxo9Km9zLyquoC9gAP8CL1gWnHZ7z",[] 
+Overfull \hbox (27.72821pt too wide) in paragraph at lines 808--808
+ []    \T1/aett/m/n/9 { "hash": "XLHBNmRQ5sJJrdMPuu48pzeyTtRo39tNDR5",[] 
+ []
+
+
+Overfull \hbox (27.72821pt too wide) in paragraph at lines 808--808
+ []    \T1/aett/m/n/9 { "hash": "XLWVQDqxo9Km9zLyquoC9gAP8CL1gWnHZ7z",[] 
  []
 
 Missing character: There is no ; in font nullfont!
@@ -1044,108 +1068,126 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (5.22821pt too wide) in paragraph at lines 878--878
-[]    \T1/aett/m/n/9 { "hash": "XLYkgq61DYaQ8NhkcqyU7rLcnSa7dSHQ16x",[] 
+Overfull \hbox (27.72821pt too wide) in paragraph at lines 914--914
+ []    \T1/aett/m/n/9 { "hash": "XLYkgq61DYaQ8NhkcqyU7rLcnSa7dSHQ16x",[] 
  []
 
 
-Overfull \hbox (5.22821pt too wide) in paragraph at lines 878--878
-[]    \T1/aett/m/n/9 { "hash": "XLHBNmRQ5sJJrdMPuu48pzeyTtRo39tNDR5",[] 
+Overfull \hbox (27.72821pt too wide) in paragraph at lines 914--914
+ []    \T1/aett/m/n/9 { "hash": "XLHBNmRQ5sJJrdMPuu48pzeyTtRo39tNDR5",[] 
  []
 
 
-Overfull \hbox (5.22821pt too wide) in paragraph at lines 878--878
-[]    \T1/aett/m/n/9 { "hash": "XLWVQDqxo9Km9zLyquoC9gAP8CL1gWnHZ7z",[] 
+Overfull \hbox (27.72821pt too wide) in paragraph at lines 914--914
+ []    \T1/aett/m/n/9 { "hash": "XLWVQDqxo9Km9zLyquoC9gAP8CL1gWnHZ7z",[] 
  []
 
 
-Overfull \hbox (5.22821pt too wide) in paragraph at lines 901--901
-[]    \T1/aett/m/n/9 { "hash": "XLa1qMBKiSEEDhojb9FFZ4tEvLf7FEQdhdU",[] 
+Overfull \hbox (27.72821pt too wide) in paragraph at lines 939--939
+ []    \T1/aett/m/n/9 { "hash": "XLa1qMBKiSEEDhojb9FFZ4tEvLf7FEQdhdU",[] 
  []
 
 
-Overfull \hbox (5.22821pt too wide) in paragraph at lines 901--901
-[]    \T1/aett/m/n/9 { "hash": "XLGw74KAy9junbh28x7ccWov9inu1Vo7pnX",[] 
+Overfull \hbox (27.72821pt too wide) in paragraph at lines 939--939
+ []    \T1/aett/m/n/9 { "hash": "XLGw74KAy9junbh28x7ccWov9inu1Vo7pnX",[] 
  []
 
 [8]
-Overfull \hbox (5.22821pt too wide) in paragraph at lines 901--901
-[]    \T1/aett/m/n/9 { "hash": "XLF2ipQ4jD3UdeX5xp1KBgeHRhemUtaA8Vm",[] 
+Overfull \hbox (27.72821pt too wide) in paragraph at lines 939--939
+ []    \T1/aett/m/n/9 { "hash": "XLF2ipQ4jD3UdeX5xp1KBgeHRhemUtaA8Vm",[] 
  []
 
 
-Overfull \hbox (8.9342pt too wide) in paragraph at lines 942--946
+Overfull \hbox (8.9342pt too wide) in paragraph at lines 981--985
 []\T1/aer/bx/n/9 flattened trees\T1/aer/m/n/9 : for any given \T1/aett/m/n/9 tr
 ee\T1/aer/m/n/9 , a spe-cial \T1/aett/m/n/9 flattened
  []
 
 
-Overfull \hbox (5.22821pt too wide) in paragraph at lines 968--968
-[]    \T1/aett/m/n/9 "name": "ttt333-name/lll111-name/bbb222-name" },[] 
+Overfull \hbox (18.29636pt too wide) in paragraph at lines 1008--1008
+ []  \T1/aett/m/n/9 ["tree", "blob", "tree", "list", "blob" "blob"],[] 
+ []
+
+
+Overfull \hbox (27.72821pt too wide) in paragraph at lines 1008--1008
+ []    \T1/aett/m/n/9 "name": "ttt333-name/lll111-name/bbb222-name" },[] 
  []
 
 [9]
-Overfull \hbox (9.94414pt too wide) in paragraph at lines 1059--1059
-[]\T1/aett/m/n/9 ipfs link /<alice-pk-hash>/friends/bob /<bob-pk-hash>[] 
+Overfull \hbox (23.01228pt too wide) in paragraph at lines 1071--1071
+ []\T1/aett/m/n/9 /ipns/XLF2ipQ4jD3UdeX5xp1KBgeHRhemUtaA8Vm/docs/ipfs[] 
  []
 
 
-Overfull \hbox (14.66006pt too wide) in paragraph at lines 1059--1059
-[]\T1/aett/m/n/9 ipfs link /<eve-pk-hash/friends/alice /<alice-pk-hash>[] 
+Overfull \hbox (32.44414pt too wide) in paragraph at lines 1100--1100
+ []\T1/aett/m/n/9 ipfs link /<alice-pk-hash>/friends/bob /<bob-pk-hash>[] 
  []
 
 
-Overfull \hbox (3.25519pt too wide) in paragraph at lines 1106--1107
+Overfull \hbox (37.16006pt too wide) in paragraph at lines 1100--1100
+ []\T1/aett/m/n/9 ipfs link /<eve-pk-hash/friends/alice /<alice-pk-hash>[] 
+ []
+
+
+Overfull \hbox (3.25519pt too wide) in paragraph at lines 1154--1155
 []\T1/aer/m/n/9 As a mounted global filesys-tem, un-der \T1/aett/m/n/9 /ipfs \T
 1/aer/m/n/9 and \T1/aett/m/n/9 /ipns\T1/aer/m/n/9 . 
  []
 
 [10]
-Overfull \hbox (10.76414pt too wide) in paragraph at lines 1146--1146
+Overfull \hbox (10.76414pt too wide) in paragraph at lines 1194--1194
 []\T1/aer/m/n/9 J. Dean and S. Ghe-mawat. Leveldb--a fast and lightweight
  []
 
 
-Overfull \hbox (3.16586pt too wide) in paragraph at lines 1146--1146
+Overfull \hbox (3.16586pt too wide) in paragraph at lines 1194--1194
 []\T1/aer/m/n/9 J. H. Howard, M. L. Kazar, S. G. Me-nees, D. A. Nichols,
  []
 
 
-Overfull \hbox (2.85959pt too wide) in paragraph at lines 1146--1146
+Overfull \hbox (2.85959pt too wide) in paragraph at lines 1194--1194
 \T1/aer/m/n/9 M. Satya-narayanan, R. N. Side-botham, and M. J. West.
  []
 
 
-Overfull \hbox (7.46931pt too wide) in paragraph at lines 1146--1146
+Overfull \hbox (7.46931pt too wide) in paragraph at lines 1194--1194
 \T1/aer/m/it/9 com-mu-ni-ca-tion re-view\T1/aer/m/n/9 . Vol. 38. (4). ACM, 2008
 , pp. 243^^U
  []
 
 
-Overfull \hbox (4.84273pt too wide) in paragraph at lines 1146--1146
+Overfull \hbox (4.84273pt too wide) in paragraph at lines 1194--1194
 \T1/aer/m/it/9 sym-po-sium on op-er-at-ing sys-tems prin-ci-ples\T1/aer/m/n/9 .
  ACM, 2013,
  []
 
-
-Overfull \hbox (11.47125pt too wide) in paragraph at lines 1146--1146
+[11]
+Overfull \hbox (11.47125pt too wide) in paragraph at lines 1194--1194
 \T1/aer/m/n/9 Low ex-tra de-lay back-ground trans-port (LED-BAT). \T1/aer/m/it/
 9 Draft-
  []
 
-[11] (./ipfs-cap2pfs.aux)
+
+Overfull \hbox (2.89229pt too wide) in paragraph at lines 1194--1194
+\T1/aer/m/n/9 In \T1/aer/m/it/9 Peer-to-peer com-put-ing (P2P), 2013 IEEE thir-
+teenth
+ []
+
+[12
+
+] (./ipfs-cap2pfs.aux)
 Package logreq Info: Writing requests to 'ipfs-cap2pfs.run.xml'.
 \openout1 = `ipfs-cap2pfs.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19431 strings out of 494965
- 373343 string characters out of 6181076
- 766453 words of memory out of 5000000
- 22324 multiletter control sequences out of 15000+600000
+ 20917 strings out of 494965
+ 406575 string characters out of 6181076
+ 796944 words of memory out of 5000000
+ 23806 multiletter control sequences out of 15000+600000
  55009 words of font info for 77 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 55i,11n,54p,1276b,973s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,11n,54p,1276b,980s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist
@@ -1159,10 +1201,10 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on ipfs-cap2pfs.pdf (11 pages, 221790 bytes).
+Output written on ipfs-cap2pfs.pdf (12 pages, 222632 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+ 99 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

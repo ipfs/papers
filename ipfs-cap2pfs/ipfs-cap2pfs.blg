@@ -1,26 +1,26 @@
-[2] Config.pm:325> INFO - This is Biber 2.1
-[3] Config.pm:328> INFO - Logfile is 'ipfs-cap2pfs.blg'
-[145] biber:276> INFO - === dt nov 10, 2015, 13:32:36
-[146] Biber.pm:334> INFO - Reading 'ipfs-cap2pfs.bcf'
-[500] Biber.pm:646> INFO - Found 28 citekeys in bib section 0
-[548] Biber.pm:2978> INFO - Processing section 0
-[595] Biber.pm:3116> INFO - Looking for bibtex format file 'ipfs-cap2pfs.bib' for section 0
-[600] bibtex.pm:1010> INFO - Decoding LaTeX character macros into UTF-8
-[606] bibtex.pm:884> INFO - Found BibTeX data source 'ipfs-cap2pfs.bib'
-[718] Utils.pm:146> WARN - I didn't find a database entry for 'WebRTC' (section 0)
-[719] Utils.pm:146> WARN - I didn't find a database entry for 'RabinFingerprints' (section 0)
-[719] Utils.pm:146> WARN - I didn't find a database entry for 'LBFS' (section 0)
-[719] Utils.pm:146> WARN - I didn't find a database entry for 'rsync' (section 0)
-[720] Utils.pm:146> WARN - I didn't find a database entry for 'Plan9' (section 0)
-[720] Utils.pm:146> WARN - I didn't find a database entry for 'Fossil' (section 0)
-[720] Utils.pm:146> WARN - I didn't find a database entry for 'Venti' (section 0)
-[721] Utils.pm:146> WARN - I didn't find a database entry for 'Proquint' (section 0)
-[721] Utils.pm:146> WARN - I didn't find a database entry for 'FUSE' (section 0)
-[1666] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1667] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1667] Biber.pm:2855> INFO - Sorting list 'nty' of type 'entry' with scheme 'nty' and locale 'en-US'
-[1668] Biber.pm:2859> INFO - No sort tailoring available for locale 'en-US'
-[1866] bbl.pm:505> INFO - Writing 'ipfs-cap2pfs.bbl' with encoding 'ascii'
-[1879] Utils.pm:146> WARN - The entry 'mashtizadeh13' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
-[1884] bbl.pm:596> INFO - Output to ipfs-cap2pfs.bbl
-[1885] Biber.pm:107> INFO - WARNINGS: 10
+[1] Config.pm:325> INFO - This is Biber 2.1
+[2] Config.pm:328> INFO - Logfile is 'ipfs-cap2pfs.blg'
+[156] biber:276> INFO - === dv nov 20, 2015, 12:13:51
+[157] Biber.pm:334> INFO - Reading 'ipfs-cap2pfs.bcf'
+[494] Utils.pm:146> WARN - Warning: Found biblatex control file version 2.8, expected version 2.7
+[499] Biber.pm:646> INFO - Found 28 citekeys in bib section 0
+[651] Biber.pm:2978> INFO - Processing section 0
+[813] Biber.pm:3116> INFO - Looking for bibtex format file 'ipfs-cap2pfs.bib' for section 0
+[837] bibtex.pm:1010> INFO - Decoding LaTeX character macros into UTF-8
+[844] bibtex.pm:884> INFO - Found BibTeX data source 'ipfs-cap2pfs.bib'
+[1054] Utils.pm:146> WARN - I didn't find a database entry for 'RabinFingerprints' (section 0)
+[1055] Utils.pm:146> WARN - I didn't find a database entry for 'LBFS' (section 0)
+[1056] Utils.pm:146> WARN - I didn't find a database entry for 'rsync' (section 0)
+[1057] Utils.pm:146> WARN - I didn't find a database entry for 'Plan9' (section 0)
+[1058] Utils.pm:146> WARN - I didn't find a database entry for 'Fossil' (section 0)
+[1058] Utils.pm:146> WARN - I didn't find a database entry for 'Venti' (section 0)
+[1059] Utils.pm:146> WARN - I didn't find a database entry for 'Proquint' (section 0)
+[1060] Utils.pm:146> WARN - I didn't find a database entry for 'FUSE' (section 0)
+[2138] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[2138] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[2139] Biber.pm:2855> INFO - Sorting list 'nty' of type 'entry' with scheme 'nty' and locale 'en-US'
+[2139] Biber.pm:2859> INFO - No sort tailoring available for locale 'en-US'
+[2338] bbl.pm:505> INFO - Writing 'ipfs-cap2pfs.bbl' with encoding 'ascii'
+[2351] Utils.pm:146> WARN - The entry 'mashtizadeh13' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[2356] bbl.pm:596> INFO - Output to ipfs-cap2pfs.bbl
+[2357] Biber.pm:107> INFO - WARNINGS: 10
