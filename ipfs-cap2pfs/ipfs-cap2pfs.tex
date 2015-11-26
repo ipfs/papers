@@ -239,7 +239,8 @@ do {
 
 Upon first connecting, peers exchange public keys, and check that \texttt{hash(other.PublicKey)} equals \texttt{other.NodeId}. If not, the connection is terminated.
 
-\paragraph{Note on Cryptographic Functions} Rather than locking the system to a particular set of function choices, IPFS favors self-describing values. Hash digest values are stored in \texttt{multihash} format, which includes a short header specifying the hash function used, and the digest length in bytes:
+\paragraph{Note on Cryptographic Functions}
+Rather than locking the system to a particular set of function choices, IPFS favors self-describing values. Hash digest values are stored in \texttt{multihash} format, which includes a short header specifying the hash function used, and the digest length in bytes:
 
 \begin{quote}
 \begin{verbatim}
@@ -262,8 +263,7 @@ IPFS nodes communicate regularly with hundreds of other nodes in the network, po
   \item \textbf{Authenticity:} IPFS optionally checks authenticity of messages by digitally signing them with the sender's private key.
 \end{itemize}
 
-\subsubsection{Note on Peer Addressing}
-
+\paragraph{Note on Peer Addressing}
 IPFS can use any network; it does not rely on or assume access to IP. This allows IPFS to be used in overlay networks. IPFS stores addresses as \texttt{multiaddr}-formatted byte strings for the underlying network to use. \texttt{multiaddr} provides a way to express addresses and their protocols, including support for encapsulation. For example:
 
 \begin{quote}
@@ -305,7 +305,7 @@ type IPFSRouting interface {
 \end{verbatim}
 \end{quote}
 
-Note: different use cases will call for substantially different routing systems (e.g. DHT in wide networks, static HT in local networks). Thus the IPFS routing system can be swapped for one that fits users' needs. As long as the interface above is met, the rest of the system will continue to function.
+Note that different use cases will call for substantially different routing systems (e.g. DHT in wide networks, static HT in local networks). Thus the IPFS routing system can be swapped for one that fits users' needs. As long as the interface above is met, the rest of the system will continue to function.
 
 \subsection{Block Exchange - BitSwap Protocol}
 \label{sec:design-exchange}
@@ -315,14 +315,14 @@ BitTorrent inspired protocol: BitSwap. Like BitTorrent, BitSwap peers are
 looking to acquire a set of blocks (\texttt{want\_list}), and have another set
 of blocks to offer in exchange (\texttt{have\_list}).
 Unlike BitTorrent, BitSwap is not limited to the blocks in one torrent.
-BitSwap operates as a persistent marketplace where node can acquire the
+BitSwap operates as a persistent marketplace where nodes can acquire the
 blocks they need, regardless of what files those blocks are part of. The
 blocks could come from completely unrelated files in the filesystem.
 Nodes come together to barter in the marketplace.
 
 While the notion of a barter system implies a virtual currency could be
 created, this would require a global ledger to track ownership
-and transfer of the currency. This can be implemented as a BitSwap Strategy, and will be explored in a future paper.
+and transfer of the currency. This can be implemented as a BitSwap strategy, and will be explored in a future paper.
 
 In the base case, BitSwap nodes have to provide direct value to each other
 in the form of blocks. This works fine when the distribution of blocks across
@@ -336,7 +336,7 @@ disseminate rare pieces, even if they are not interested in them directly.
 \subsubsection{BitSwap Credit}
 
 The protocol must also incentivize nodes to seed when they do not need
-anything in particular, as they might have the blocks others want. Thus,
+anything in particular, as they might have the blocks that others want. Thus,
 BitSwap nodes send blocks to their peers optimistically, expecting the debt to
 be repaid. But leeches (free-loading nodes that never share) must be protected against. A simple credit-like system solves the problem:
 
@@ -347,9 +347,9 @@ be repaid. But leeches (free-loading nodes that never share) must be protected a
 \end{enumerate}
 
 Note that if a node decides not to send to a peer, the node subsequently
-ignores the peer for an \texttt{ignore\_cooldown} timeout. This prevents
+ignores the peer for an \texttt{ignore\_cooldown} timeout
+(the default for BitSwap is 10 seconds). This prevents
 senders from trying to game the probability by just causing more dice-rolls.
-(Default BitSwap is 10 seconds).
 
 \subsubsection{BitSwap Strategy}
 
@@ -358,7 +358,7 @@ The differing strategies that BitSwap peers might employ have wildly different e
 \begin{enumerate}
   \item maximize the trade performance for the node, and the whole exchange
   \item prevent freeloaders from exploiting and degrading the exchange
-  \item be effective with and resistant to other, unknown
+  \item be effective with and resistant to other unknown
   strategies
   \item be lenient to trusted peers
 \end{enumerate}
@@ -433,7 +433,7 @@ improve.
 
 \subsubsection{BitSwap Ledger}
 
-BitSwap nodes keep ledgers accounting the transfers with other nodes. This allows nodes to keep track of history and avoid tampering. When activating a connection, BitSwap nodes exchange their ledger information. If it does not match exactly, the ledger is reinitialized from scratch, losing the accrued credit or debt.  It is possible for malicious nodes to purposefully ``lose'' the Ledger, hoping to erase debts. It is unlikely that nodes will have accrued enough debt to warrant also losing the accrued trust; however the partner node is free to count it as misconduct, and refuse to trade.
+BitSwap nodes keep ledgers accounting the transfers with other nodes. This allows nodes to keep track of history and avoid tampering. When activating a connection, BitSwap nodes exchange their ledger information. If it does not match exactly, the ledger is reinitialized from scratch, losing the accrued credit or debt.  It is possible for malicious nodes to purposefully ``lose'' the ledger, hoping to erase debts. It is unlikely that nodes will have accrued enough debt to warrant also losing the accrued trust; however the partner node is free to count it as misconduct, and refuse to trade.
 
 \begin{quote}
 \begin{verbatim}
@@ -454,7 +454,7 @@ useful ledgers: the old (peers may not exist anymore) and small.
 
 \subsubsection{BitSwap Specification}
 
-BitSwap nodes follow a simple protocol.
+BitSwap nodes follow a simple protocol:
 
 \begin{quote}
 \begin{verbatim}
@@ -466,8 +466,8 @@ type BitSwap struct {
   active map[NodeId]Peer
   // currently open connections to other nodes
 
-  need_list []Multihash
-  // checksums of blocks this node needs
+  want_list []Multihash
+  // checksums of blocks this node wants
 
   have_list []Multihash
   // checksums of blocks this node has
@@ -499,11 +499,11 @@ interface Peer {
 
 Sketch of the lifetime of a peer connection:
 \begin{enumerate}
-  \item Open: peers send \texttt{ledgers} until they agree.
-  \item Sending: peers exchange \texttt{want\_lists} and \texttt{blocks}.
+  \item Open: peers send ledgers until they agree.
+  \item Sending: peers exchange want lists and blocks.
   \item Close: peers deactivate a connection.
   \item Ignored: (special) a peer is ignored (for the duration of a timeout)
-        if a node's strategy avoids sending
+        if a node's strategy avoids sending.
 
 \end{enumerate}
 
@@ -511,16 +511,16 @@ Sketch of the lifetime of a peer connection:
 
 When connecting, a node initializes a connection with a
 \texttt{Ledger}, either stored from a connection in the past or a new one
-zeroed out. Then, sends an Open message with the \texttt{Ledger} to the peer.
+zeroed out. Then, sends an \texttt{open} message with the \texttt{Ledger} to the peer.
 
-Upon receiving an \texttt{Open} message, a peer chooses whether to activate
+Upon receiving an \texttt{open} message, a peer chooses whether to activate
 the connection. If -- acording to the receiver's \texttt{Ledger} -- the sender
 is not a trusted agent (transmission below zero, or large outstanding debt) the
 receiver may opt to ignore the request. This should be done probabilistically
 with an \texttt{ignore\_cooldown} timeout, as to allow errors to be corrected
 and attackers to be thwarted.
 
-If activating the connection, the receiver initializes a Peer object with the
+If activating the connection, the receiver initializes a \texttt{Peer} object with the
 local version of the \texttt{Ledger} and sets the \texttt{last\_seen}
 timestamp. Then, it compares the received
 \texttt{Ledger} with its own. If they match exactly, the connections have
@@ -546,7 +546,7 @@ data. Upon receiving all the data, the receiver computes the Multihash
 checksum to verify it matches the expected one, and returns confirmation.
 
 Upon finalizing the correct transmission of a block, the receiver moves the
-block from \texttt{need\_list} to \texttt{have\_list}, and both the receiver
+block from \texttt{want\_list} to \texttt{have\_list}, and both the receiver
 and sender update their ledgers to reflect the additional bytes transmitted.
 
 If a transmission verification fails, the sender is either malfunctioning or
@@ -682,7 +682,7 @@ IPFS objects can be traversed with a string path API. Paths work as they do in t
 \end{verbatim}
 \end{quote}
 
-The \texttt{/ipfs} prefix allows mounting into existing systems at a standard mount point without conflict (mount point names are of course configurable). The second path component (first within IPFS) is the hash of an object. This is always the case, as there is no global root. A root object would have the impossible task of handling consistency of millions of objects in a distributed (and possibly disconnected) environment. Instead, we simulate the root with content addressing. All objects are always accessible via their hash. Note this means that given three objects in path \texttt{<foo>/bar/baz}, the last object is accessible by all:
+The \texttt{/ipfs} prefix allows mounting into existing systems at a standard mount point without conflict (mount point names are of course configurable). The second path component (first within IPFS) is the hash of an object. This is always the case, as there is no global root. A root object would have the impossible task of handling consistency of millions of objects in a distributed (and possibly disconnected) environment. Instead, we simulate the root with content addressing. All objects are always accessible via their hash. Note that this means that given three objects in path \texttt{<foo>/bar/baz}, the last object is accessible by all:
 
 \begin{quote}
 \begin{verbatim}
