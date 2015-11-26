@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2015.11.18)  20 NOV 2015 12:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2015.11.18)  26 NOV 2015 15:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -846,14 +846,7 @@ Package biblatex Info: ... file 'ipfs-cap2pfs.bbl' found.
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Venti
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                FUSE
+(biblatex)                Plan9
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -867,14 +860,21 @@ Package biblatex Warning: The following entry could not be found
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Fossil
+(biblatex)                FUSE
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Plan9
+(biblatex)                rsync
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Fossil
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -895,7 +895,7 @@ Package biblatex Warning: The following entry could not be found
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                rsync
+(biblatex)                Venti
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -973,19 +973,6 @@ Overfull \hbox (8.8645pt too wide) in paragraph at lines 305--305
 Overfull \hbox (13.58043pt too wide) in paragraph at lines 305--305
  []  \T1/aett/m/n/9 // gets a number of peers serving a large value[] 
  []
-
-
-Overfull \hbox (2.86789pt too wide) in paragraph at lines 361--363
-[]\T1/aer/m/n/9 be ef-fec-tive with and re-sis-tant to other, un-known strate-
- []
-
-\openout3 = `ipfs-cap2pfs.pgf-plot.gnuplot'.
-
-runsystem(gnuplot ipfs-cap2pfs.pgf-plot.gnuplot)...disabled (restricted).
-
-
-Package pgf Warning: Plot data file `ipfs-cap2pfs.pgf-plot.table' not found. on
- input line 392.
 
 
 Overfull \hbox (1.67198pt too wide) in paragraph at lines 399--410
@@ -1150,9 +1137,9 @@ Overfull \hbox (2.85959pt too wide) in paragraph at lines 1194--1194
  []
 
 
-Overfull \hbox (7.46931pt too wide) in paragraph at lines 1194--1194
-\T1/aer/m/it/9 com-mu-ni-ca-tion re-view\T1/aer/m/n/9 . Vol. 38. (4). ACM, 2008
-, pp. 243^^U
+Overfull \hbox (13.38684pt too wide) in paragraph at lines 1194--1194
+\T1/aer/m/it/9 ACM trans-ac-tions on com-puter sys-tems (TOCS)\T1/aer/m/n/9 , 6
+(1):51^^U
  []
 
 
@@ -1201,7 +1188,7 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on ipfs-cap2pfs.pdf (12 pages, 222632 bytes).
+Output written on ipfs-cap2pfs.pdf (12 pages, 223613 bytes).
 PDF statistics:
  99 PDF objects out of 1000 (max. 8388607)
  71 compressed objects within 1 object stream

@@ -100,7 +100,7 @@
       \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the Eighteenth ACM Symposium on Operating Systems Principles}
+      \field{booktitle}{Proceedings of the Eighteenth {ACM} Symposium on Operating Systems Principles}
       \field{title}{Wide-area cooperative storage with {CFS}}
       \field{year}{2001}
       \field{pages}{202\bibrangedash 2015}
@@ -132,7 +132,7 @@
       \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{NSDI}
+      \field{booktitle}{{NSDI}}
       \field{title}{Democratizing Content Publication with {Coral}}
       \field{volume}{4}
       \field{year}{2004}
@@ -158,7 +158,7 @@
       \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{ACM Transactions on Computer Systems (TOCS)}
+      \field{journaltitle}{{ACM} Transactions on Computer Systems ({TOCS})}
       \field{number}{1}
       \field{title}{Scale and performance in a distributed file system}
       \field{volume}{6}
@@ -189,7 +189,7 @@
       \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{ACM Sigplan Notices}
+      \field{journaltitle}{{ACM} Sigplan Notices}
       \field{number}{11}
       \field{title}{Oceanstore: An architecture for global-scale persistent storage}
       \field{volume}{35}
@@ -213,7 +213,7 @@
       \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{ACM SIGCOMM Computer Communication Review}
+      \field{booktitle}{{ACM} {SIGCOMM} Computer Communication Review}
       \field{number}{4}
       \field{title}{{BitTorrent} is an auction: analyzing and improving {BitTorrent}'s incentives}
       \field{volume}{38}
@@ -237,7 +237,7 @@
       \field{sortinithash}{2684bec41e9697b92699b46491061da2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the Twenty-Fourth ACM Symposium on Operating Systems Principles}
+      \field{booktitle}{Proceedings of the Twenty-Fourth {ACM} Symposium on Operating Systems Principles}
       \field{title}{Replication, history, and grafting in the {Ori} file system}
       \field{year}{2013}
       \field{pages}{151\bibrangedash 166}
@@ -294,7 +294,7 @@
       \field{sortinithash}{2684bec41e9697b92699b46491061da2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the 8th ACM SIGOPS European workshop on Support for composing distributed applications}
+      \field{booktitle}{Proceedings of the 8th {ACM} {SIGOPS} European workshop on Support for composing distributed applications}
       \field{title}{Escaping the evils of centralized control with self-certifying pathnames}
       \field{year}{1998}
       \field{pages}{118\bibrangedash 125}
@@ -408,14 +408,14 @@
       \range{pages}{10}
     \endentry
   \endsortlist
-  \missing{Venti}
-  \missing{FUSE}
-  \missing{LBFS}
-  \missing{Fossil}
   \missing{Plan9}
+  \missing{LBFS}
+  \missing{FUSE}
+  \missing{rsync}
+  \missing{Fossil}
   \missing{RabinFingerprints}
   \missing{Proquint}
-  \missing{rsync}
+  \missing{Venti}
 \endrefsection
 \endinput
 
