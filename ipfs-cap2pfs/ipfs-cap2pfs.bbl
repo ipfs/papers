@@ -300,6 +300,29 @@
       \field{pages}{118\bibrangedash 125}
       \range{pages}{8}
     \endentry
+    \entry{LBFS}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=6272407b3a4585f7b6d2c0f34eb5ac1f}{Muthitacharoen}{M\bibinitperiod}{Athicha}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=007aa4f458b854c3e9e7eaeeda29d4c9}{Chen}{C\bibinitperiod}{Benjie}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=f74609e259322f9c7b6a2c775a7d8e29}{Mazieres}{M\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \list{organization}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{315059ade6996cc222f9604a03c6781e}
+      \strng{fullhash}{315059ade6996cc222f9604a03c6781e}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{ACM} {SIGOPS} Operating Systems Review}
+      \field{number}{5}
+      \field{title}{A low-bandwidth network file system}
+      \field{volume}{35}
+      \field{year}{2001}
+      \field{pages}{174\bibrangedash 187}
+      \range{pages}{14}
+    \endentry
     \entry{WebRTC}{report}{}
       \name{author}{4}{}{%
         {{hash=f3a972f98579c8c7dc759d18c35d01c5}{Narayanan}{N\bibinitperiod}{Anant}{A\bibinitperiod}{}{}{}{}}%
@@ -338,6 +361,82 @@
       \verb{url}
       \verb https://github.com/maxogden/dat
       \endverb
+    \endentry
+    \entry{Plan9}{inproceedings}{}
+      \true{moreauthor}
+      \name{author}{4}{}{%
+        {{hash=93ef763b27739841ef3b85d235621787}{Pike}{P\bibinitperiod}{Rob}{R\bibinitperiod}{}{}{}{}}%
+        {{hash=44dfdc5c8e5c79b79d40fbd262e7e68c}{Presotto}{P\bibinitperiod}{Dave}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=0738a39ce7d754134211fbb089ce3a15}{Thompson}{T\bibinitperiod}{Ken}{K\bibinitperiod}{}{}{}{}}%
+        {{hash=f88da78392a92ceba5cd5813bc1ec9f5}{Trickey}{T\bibinitperiod}{Howard}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \list{organization}{1}{%
+        {London, UK}%
+      }
+      \strng{namehash}{0cfd13b017b5c8f284237b9f7438a2a9}
+      \strng{fullhash}{f481ecb9ca9f9980815205634dd4c70c}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the summer 1990 {UKUUG} Conference}
+      \field{title}{Plan 9 from bell labs}
+      \field{year}{1990}
+      \field{pages}{1\bibrangedash 9}
+      \range{pages}{9}
+    \endentry
+    \entry{Venti}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=ff79e7464fb0da9976c23473a3019502}{Quinlan}{Q\bibinitperiod}{Sean}{S\bibinitperiod}{}{}{}{}}%
+        {{hash=f1a3c5013adb18dd6f9cedb4b9de94ef}{Dorward}{D\bibinitperiod}{Sean}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{ef7329d2d0453101211a4b047e08500e}
+      \strng{fullhash}{ef7329d2d0453101211a4b047e08500e}
+      \field{sortinit}{Q}
+      \field{sortinithash}{15867262911a166ca2270ec58a0e3fe9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{FAST}
+      \field{title}{Venti: A New Approach to Archival Storage.}
+      \field{volume}{2}
+      \field{year}{2002}
+      \field{pages}{89\bibrangedash 101}
+      \range{pages}{13}
+    \endentry
+    \entry{Fossil}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=ff79e7464fb0da9976c23473a3019502}{Quinlan}{Q\bibinitperiod}{Sean}{S\bibinitperiod}{}{}{}{}}%
+        {{hash=47fc594399c11489838ccec2fe5ca538}{McKie}{M\bibinitperiod}{Jim}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=d02ba631c0c7595e1f0ca78d980ee917}{Cox}{C\bibinitperiod}{Russ}{R\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Lucent Technologies Bell Labs, Unpublished memorandum (September 2003)}%
+      }
+      \strng{namehash}{250ee8d53647f0a3f04ced2f514cfdac}
+      \strng{fullhash}{250ee8d53647f0a3f04ced2f514cfdac}
+      \field{sortinit}{Q}
+      \field{sortinithash}{15867262911a166ca2270ec58a0e3fe9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Fossil, an archival file server}
+      \field{year}{2003}
+    \endentry
+    \entry{RabinFingerprints}{book}{}
+      \true{moreauthor}
+      \name{author}{1}{}{%
+        {{hash=755f719073b9032722550536facb7dcd}{Rabin}{R\bibinitperiod}{Michael\bibnamedelima O.}{M\bibinitperiod\bibinitdelim O\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Center for Research in Computing Techn., Aiken Computation Laboratory, Univ.}%
+      }
+      \strng{namehash}{25dcd5e77aab10b302296a54ee1bd150}
+      \strng{fullhash}{25dcd5e77aab10b302296a54ee1bd150}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Fingerprinting by random polynomials}
+      \field{year}{1981}
     \endentry
     \entry{ICE}{article}{}
       \name{author}{2}{}{%
@@ -387,6 +486,37 @@
       \field{title}{Stream control transmission protocol ({SCTP}): a reference guide}
       \field{year}{2001}
     \endentry
+    \entry{FUSE}{article}{}
+      \true{moreauthor}
+      \name{author}{1}{}{%
+        {{hash=c72de6a5fa2a8fff2c3e56b97b395502}{Szeredi}{S\bibinitperiod}{Miklos}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{b873c1e68a084ec851d5f43b4b44089c}
+      \strng{fullhash}{b873c1e68a084ec851d5f43b4b44089c}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{FUSE}: Filesystem in userspace}
+      \verb{url}
+      \verb http://fuse.sourceforge.net/
+      \endverb
+    \endentry
+    \entry{rsync}{article}{}
+      \true{moreauthor}
+      \name{author}{2}{}{%
+        {{hash=e03aa2792f85bde1bb795365e3bdc0b7}{Tridgell}{T\bibinitperiod}{Andrew}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=19312cfae8512bb399698679913bf5d3}{Mackerras}{M\bibinitperiod}{Paul}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{8d754fdcce8417ce89a679f9db372983}
+      \strng{fullhash}{f6d8013cabcdc0b555c4423509819584}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The rsync algorithm}
+      \field{year}{1996}
+    \endentry
     \entry{wang13}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=cce05cab2c437e9c128f853684ee3137}{Wang}{W\bibinitperiod}{Liang}{L\bibinitperiod}{}{}{}{}}%
@@ -407,15 +537,21 @@
       \field{pages}{1\bibrangedash 10}
       \range{pages}{10}
     \endentry
+    \entry{Proquint}{article}{}
+      \name{author}{1}{}{%
+        {{hash=34a3e014b99e3eeffd2528716c47b4b8}{Wilkerson}{W\bibinitperiod}{Daniel\bibnamedelima Shawcross}{D\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{34a3e014b99e3eeffd2528716c47b4b8}
+      \strng{fullhash}{34a3e014b99e3eeffd2528716c47b4b8}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{arXiv} preprint {arXiv}:0901.4016}
+      \field{title}{A Proposal for Proquints: Identifiers that are Readable, Spellable, and Pronounceable}
+      \field{year}{2009}
+    \endentry
   \endsortlist
-  \missing{Plan9}
-  \missing{LBFS}
-  \missing{FUSE}
-  \missing{rsync}
-  \missing{Fossil}
-  \missing{RabinFingerprints}
-  \missing{Proquint}
-  \missing{Venti}
 \endrefsection
 \endinput
 
