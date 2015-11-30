@@ -1021,16 +1021,16 @@ So far, the IPFS stack forms a peer-to-peer block exchange constructing a conten
 It is worth stating why -- if mutable data is necessary in the end -- we worked hard to build up an \textit{immutable} Merkle DAG. Consider the properties of IPFS that fall out of the Merkle DAG: objects can be (a) retrieved via their hash, (b) integrity checked, (c) linked to others, and (d) cached indefinitely. In a sense:
 
 \begin{center}
-  Objects are \textbf{permanent}
+  Objects are \textbf{permanent}.
 \end{center}
 
 \noindent These are the critical properties of a high-performance distributed system, where data is expensive to move across network links. Object content addressing constructs a Web with (a) significant bandwidth optimizations, (b) untrusted content serving, (c) permanent links, and (d) the ability to make full permanent backups of any object and its references.
 
-The Merkle DAG, immutable content-addressed objects, and Naming, mutable pointers to the Merkle DAG, instantiate a dichotomy present in many successful distributed systems. These include the Git Version Control System, with its immutable objects and mutable references; and Plan9 \cite{Plan9}, the distributed successor to UNIX, with its mutable Fossil \cite{Fossil} and immutable Venti \cite{Venti} file systems. LBFS \cite{LBFS} also uses mutable indices and immutable chunks.
+The Merkle DAG (immutable content-addressed objects) and Naming (mutable pointers to the Merkle DAG) instantiate a dichotomy present in many successful distributed systems. These include the Git Version Control System, with its immutable objects and mutable references; and Plan9 \cite{Plan9}, the distributed successor to UNIX, with its mutable Fossil \cite{Fossil} and immutable Venti \cite{Venti} file systems. LBFS \cite{LBFS} also uses mutable indices and immutable chunks.
 
 \subsubsection{Self-Certified Names}
 
-Using the naming scheme from SFS~\cite{mazieres98, mazieres00} gives us a way to construct self-certified names, in a cryptographically assigned global namespace, that are mutable. The IPFS scheme is as follows.
+Using the naming scheme from SFS~\cite{mazieres98, mazieres00} gives us a way to construct self-certified names (in a cryptographically assigned global namespace) that are mutable. The IPFS scheme is as follows.
 
 \begin{enumerate}
   \item  Recall that in IPFS:
@@ -1051,7 +1051,7 @@ NodeId = hash(node.PubKey)
 /ipns/XLF2ipQ4jD3UdeX5xp1KBgeHRhemUtaA8Vm/
 \end{verbatim}
 
-  \item When other users retrieve the object, they can check the signature matches the public key and NodeId. This verifies the authenticity of the Object published by the user, achieving mutable state retrival.
+  \item When other users retrieve the object, they can check the signature matches the public key and NodeId. This verifies the authenticity of the Object published by the user, achieving mutable state retrieval.
 
 \end{enumerate}
 
@@ -1110,6 +1110,8 @@ ipfs link /<eve-pk-hash/friends/alice /<alice-pk-hash>
 If \texttt{/ipns/<domain>} is a valid domain name, IPFS
 looks up key \texttt{ipns} in its \texttt{DNS TXT} records. IPFS
 interprets the value as either an object hash or another IPNS path:
+
+%% The specification used here is obsolete. (ivilata)
 
 \begin{quote}
 \begin{verbatim}
