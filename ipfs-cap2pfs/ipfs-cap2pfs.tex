@@ -662,7 +662,7 @@ XLWVQDqxo9Km9zLyquoC9gAP8CL1gWnHZ7z
 A raw data field and a common link structure are the necessary components for constructing arbitrary data structures on top of IPFS. While it is easy to see how the Git object model fits on top of this DAG, consider these other potential data structures:
 (a) key-value stores
 (b) traditional relational databases
-(c) Linked Data triple stores
+(c) linked data triple stores
 (d) linked document publishing systems
 (e) linked communications platforms
 (f) cryptocurrency blockchains.
@@ -764,9 +764,11 @@ IPFS also defines a set of objects for modeling a versioned file system on top o
   \item \texttt{commit}: a snapshot in the version history of a tree.
 \end{enumerate}
 
-I hoped to use the Git object formats exactly, but had to depart to introduce certain features useful in a distributed file system, namely (a) fast size lookups (aggregate byte sizes have been added to objects), (b) large file deduplication (adding a \texttt{list} object), and (c) embedding of \texttt{commits} into \texttt{trees}. However, IPFS File objects are close enough to Git that conversion between the two is possible. Also, a set of Git objects can be introduced to convert without losing any information (unix file permissions, etc).
+I hoped to use the Git object formats exactly, but had to depart to introduce certain features useful in a distributed file system, namely (a) fast size lookups (aggregate byte sizes have been added to objects), (b) large file deduplication (adding a \texttt{list} object), and (c) embedding of \texttt{commits} into \texttt{trees}. However, IPFS File objects are close enough to Git that conversion between the two is possible. Also, a set of Git objects can be introduced to convert without losing any information (UNIX file permissions, etc).
 
-Notation: File object formats below use JSON. Note that this structure is actually binary encoded using protobufs, though ipfs includes import/export to JSON.
+Notation: File object formats below use JSON. Note that this structure is actually binary encoded using Protocol Buffers, though IPFS includes import/export to JSON.
+
+%% The schema of the examples below has changed and is obsolete. (ivilata)
 
 \subsubsection{File Object: \texttt{blob}}
 
@@ -951,17 +953,19 @@ of the Merkle DAG object model.
 
 The full power of the Git version control tools is available to IPFS users. The object model is compatible, though not the same. It is possible to (a) build a version of the Git tools modified to use the IPFS object graph, (b) build a mounted FUSE file system that mounts an IPFS \texttt{tree} as a Git repo, translating Git file system read/writes to the IPFS formats.
 
+%% Does that really allow writing? (ivilata)
+
 
 \subsubsection{File System Paths}
 
-As we saw in the Merkle DAG section, IPFS objects can be traversed with a string path API. The IPFS File Objects are designed to make mounting IPFS onto a UNIX file system simpler. They restrict \texttt{trees} to have no data, in order to represent them as directories. And \texttt{commits} can either be represented as directories or hidden from the file system entirely.
+As we saw in the Merkle DAG section, IPFS objects can be traversed with a string path API. The IPFS File Objects are designed to make mounting IPFS onto a UNIX file system simpler. They restrict \texttt{trees} to have no data, in order to represent them as directories. The \texttt{commits} can either be represented as directories or hidden from the file system entirely.
 
 \subsubsection{Splitting Files into Lists and Blob}
 
 One of the main challenges with versioning and distributing large files is finding the right way to split them into independent blocks. Rather than assume it can make the right decision for every type of file, IPFS offers the following alternatives:
 
 \begin{enumerate}
-  \item[(a)] Use Rabin Fingerprints \cite{RabinFingerprints} as in LBFS \cite{LBFS} to pick suitable block boundaries.
+  \item[(a)] Use Rabin fingerprints \cite{RabinFingerprints} as in LBFS \cite{LBFS} to pick suitable block boundaries.
   \item[(b)] Use the rsync \cite{rsync} rolling-checksum algorithm, to detect blocks that have changed between versions.
   \item[(c)] Allow users to specify block-splitting functions highly tuned for specific files.
 \end{enumerate}
@@ -984,7 +988,7 @@ This is mitigated by:
         would really be paths parting from the original tree, with slashes.
 \end{itemize}
 
-For example, \texttt{flattened tree} for \texttt{ttt111} above:
+For example, the \texttt{flattened tree} for \texttt{ttt111} in \Cref{fig:sample-object-graph}:
 
 \begin{quote}
 \begin{verbatim}
