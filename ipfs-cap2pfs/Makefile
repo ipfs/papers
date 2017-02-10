@@ -5,8 +5,8 @@ LONG=ipfs-p2p-file-system
 all: $(LONG).pdf
 
 $(LONG).pdf: $(SHORT).tex sig-alternate.cls $(SHORT).bib
-	pdflatex $(SHORT).tex
-	bibtex $(SHORT)
+	pdflatex -shell-escape $(SHORT).tex
+	biber $(SHORT)
 	pdflatex $(SHORT).tex
 	pdflatex $(SHORT).tex
 	mv $(SHORT).pdf $(LONG).pdf

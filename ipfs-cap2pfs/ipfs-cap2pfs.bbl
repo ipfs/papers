@@ -1,95 +1,557 @@
-\begin{thebibliography}{10}
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.5 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem{baumgart07}
-I.~Baumgart and S.~Mies.
-\newblock S/kademlia: A practicable approach towards secure key-based routing.
-\newblock In {\em Parallel and Distributed Systems, 2007 International
-  Conference on}, volume~2, pages 1--8. IEEE, 2007.
 
-\bibitem{BitTorrentUsers}
-I.~BitTorrent.
-\newblock Bittorrent and µtorrent software surpass 150 million user milestone,
-  Jan. 2012.
+\refsection{0}
+  \sortlist{nty}{nty}
+    \entry{baumgart07}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=de766501b8d945e9a4b9292bc0dd624c}{Baumgart}{B\bibinitperiod}{Ingmar}{I\bibinitperiod}{}{}{}{}}%
+        {{hash=089d1d95c0352742c6337b1b5f828d22}{Mies}{M\bibinitperiod}{Sebastian}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{383353c18bd261bb39efb51324f13cd8}
+      \strng{fullhash}{383353c18bd261bb39efb51324f13cd8}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Parallel and Distributed Systems, 2007 International Conference on}
+      \field{title}{{S/Kademlia}: A practicable approach towards secure key-based routing}
+      \field{volume}{2}
+      \field{year}{2007}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+    \endentry
+    \entry{BitTorrentUsers}{online}{}
+      \name{author}{1}{}{%
+        {{hash=3e87d237b1ff15dfe95a0b88b5b7f4db}{BitTorrent}{B\bibinitperiod}{Inc.}{I\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{3e87d237b1ff15dfe95a0b88b5b7f4db}
+      \strng{fullhash}{3e87d237b1ff15dfe95a0b88b5b7f4db}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{01}
+      \field{title}{{BitTorrent} and {$\mu$Torrent} Software Surpass 150 Million User Milestone}
+      \field{year}{2012}
+      \verb{url}
+      \verb http://www.bittorrent.com/intl/es/company/about/ces_2012_150m_users
+      \endverb
+    \endentry
+    \entry{Camlistore}{online}{}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labeltitlesource}{title}
+      \field{title}{Camlistore}
+      \verb{url}
+      \verb http://camlistore.org/
+      \endverb
+    \endentry
+    \entry{cohen03}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=48e49f55c3b1ebfe9cf1954935b19d8d}{Cohen}{C\bibinitperiod}{Bram}{B\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{48e49f55c3b1ebfe9cf1954935b19d8d}
+      \strng{fullhash}{48e49f55c3b1ebfe9cf1954935b19d8d}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Workshop on Economics of Peer-to-Peer systems}
+      \field{title}{Incentives build robustness in {BitTorrent}}
+      \field{volume}{6}
+      \field{year}{2003}
+      \field{pages}{68\bibrangedash 72}
+      \range{pages}{5}
+    \endentry
+    \entry{CFS}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=a86867a939ed2e915233f5e4d031239d}{Dabek}{D\bibinitperiod}{Frank}{F\bibinitperiod}{}{}{}{}}%
+        {{hash=c4e9f8e102c2895559ca5b01cc81e396}{Kaashoek}{K\bibinitperiod}{M.\bibnamedelimi Frans}{M\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=ca0d40fd2ed3fc314917b42745659849}{Karger}{K\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=e72124f8c830de64524443c1beaf2d5f}{Morris}{M\bibinitperiod}{Robert}{R\bibinitperiod}{}{}{}{}}%
+        {{hash=51d9ef26181e2e8a9dc546b401e0bb26}{Stoica}{S\bibinitperiod}{Ion}{I\bibinitperiod}{}{}{}{}}%
+      }
+      \list{organization}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{a34845916feb775a23a5655f430a7034}
+      \strng{fullhash}{a34845916feb775a23a5655f430a7034}
+      \field{sortinit}{D}
+      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Eighteenth {ACM} Symposium on Operating Systems Principles}
+      \field{title}{Wide-area cooperative storage with {CFS}}
+      \field{year}{2001}
+      \field{pages}{202\bibrangedash 2015}
+      \range{pages}{1814}
+    \endentry
+    \entry{dean11}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=4aecfb0cc2e1e3b7899129fa2a94e2b8}{Dean}{D\bibinitperiod}{Jeffrey}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=193bcec5240237591ad8fb697869f013}{Ghemawat}{G\bibinitperiod}{Sanjay}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{59b423e9fed33260f87a089f738c1beb}
+      \strng{fullhash}{59b423e9fed33260f87a089f738c1beb}
+      \field{sortinit}{D}
+      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{leveldb--A fast and lightweight key/value database library by {Google}}
+      \field{year}{2011}
+    \endentry
+    \entry{freedman04}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=ae60f8c899894c4ba4d90cdf720eaba1}{Freedman}{F\bibinitperiod}{Michael\bibnamedelima J}{M\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{hash=77c6e8ce66f48dda45f356baedf3a101}{Freudenthal}{F\bibinitperiod}{Eric}{E\bibinitperiod}{}{}{}{}}%
+        {{hash=f74609e259322f9c7b6a2c775a7d8e29}{Mazieres}{M\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{374b89106e23b128b3abb6217d560d83}
+      \strng{fullhash}{374b89106e23b128b3abb6217d560d83}
+      \field{sortinit}{F}
+      \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{NSDI}}
+      \field{title}{Democratizing Content Publication with {Coral}}
+      \field{volume}{4}
+      \field{year}{2004}
+      \field{pages}{18\bibrangedash 18}
+      \range{pages}{1}
+    \endentry
+    \entry{AFS}{article}{}
+      \name{author}{7}{}{%
+        {{hash=d36e5a8f8e8c788234f2149a04e78e92}{Howard}{H\bibinitperiod}{John\bibnamedelima H}{J\bibinitperiod\bibinitdelim H\bibinitperiod}{}{}{}{}}%
+        {{hash=2cedfe2f49192907b879dc7478722fc6}{Kazar}{K\bibinitperiod}{Michael\bibnamedelima L}{M\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
+        {{hash=2afb399a33f9e6cb297b41e5603feb0d}{Menees}{M\bibinitperiod}{Sherri\bibnamedelima G}{S\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
+        {{hash=d883f5499dc644c617e31201c78673c6}{Nichols}{N\bibinitperiod}{David\bibnamedelima A}{D\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{hash=dad1fb554e5e561ff7cc2cab41c4bd71}{Satyanarayanan}{S\bibinitperiod}{Mahadev}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=c6e90a3106dd0716e2e06a97dba8ce22}{Sidebotham}{S\bibinitperiod}{Robert\bibnamedelima N}{R\bibinitperiod\bibinitdelim N\bibinitperiod}{}{}{}{}}%
+        {{hash=3de3be5e54673a068a1a12c4ab4e5c15}{West}{W\bibinitperiod}{Michael\bibnamedelima J}{M\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{2244cb55dd9052d34bb79debacb9f5e8}
+      \strng{fullhash}{2244cb55dd9052d34bb79debacb9f5e8}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{ACM} Transactions on Computer Systems ({TOCS})}
+      \field{number}{1}
+      \field{title}{Scale and performance in a distributed file system}
+      \field{volume}{6}
+      \field{year}{1988}
+      \field{pages}{51\bibrangedash 81}
+      \range{pages}{31}
+    \endentry
+    \entry{Oceanstore}{article}{}
+      \true{moreauthor}
+      \name{author}{10}{}{%
+        {{hash=eb3352ded591687a6f8e4143987603fe}{Kubiatowicz}{K\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=ca0e0045640f03b0eb8d1779f669001c}{Bindel}{B\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=b6f25c2ea695f4385f6acab832194dfc}{Chen}{C\bibinitperiod}{Yan}{Y\bibinitperiod}{}{}{}{}}%
+        {{hash=c4cd509bdb746bfc363d54d2d65fab71}{Czerwinski}{C\bibinitperiod}{Steven}{S\bibinitperiod}{}{}{}{}}%
+        {{hash=1b40ef08a6ff24c0e863d7f84258d9cc}{Eaton}{E\bibinitperiod}{Patrick}{P\bibinitperiod}{}{}{}{}}%
+        {{hash=402004a0518170450cfffbbc5b57c4b6}{Geels}{G\bibinitperiod}{Dennis}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=947f5404783bfc90e41228f77bcbe964}{Gummadi}{G\bibinitperiod}{Ramakrishan}{R\bibinitperiod}{}{}{}{}}%
+        {{hash=a3365c075d8a9dfec2d10628c3ff8ef2}{Rhea}{R\bibinitperiod}{Sean}{S\bibinitperiod}{}{}{}{}}%
+        {{hash=73d15e37e8a155b476a31ceaaf0a569f}{Weatherspoon}{W\bibinitperiod}{Hakim}{H\bibinitperiod}{}{}{}{}}%
+        {{hash=677914c38f79edf457407a0ac011ac56}{Weimer}{W\bibinitperiod}{Westley}{W\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{4e94dd93ec5ec40367a3613e33122413}
+      \strng{fullhash}{d106f0cc4a2b8c17e2114c535119290c}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{ACM} Sigplan Notices}
+      \field{number}{11}
+      \field{title}{Oceanstore: An architecture for global-scale persistent storage}
+      \field{volume}{35}
+      \field{year}{2000}
+      \field{pages}{190\bibrangedash 201}
+      \range{pages}{12}
+    \endentry
+    \entry{levin08}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=625ef8fca1dbc98886f6386ea6b0be9f}{Levin}{L\bibinitperiod}{Dave}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=f24ae67d7a9d6cf15a92163520154e09}{LaCurts}{L\bibinitperiod}{Katrina}{K\bibinitperiod}{}{}{}{}}%
+        {{hash=9b584ed96597bc86be7c87234027a521}{Spring}{S\bibinitperiod}{Neil}{N\bibinitperiod}{}{}{}{}}%
+        {{hash=fbfbd346c570975eb853de0b0a726041}{Bhattacharjee}{B\bibinitperiod}{Bobby}{B\bibinitperiod}{}{}{}{}}%
+      }
+      \list{organization}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{37ebaf35a8d5c1bfd0d17b9743d5132e}
+      \strng{fullhash}{37ebaf35a8d5c1bfd0d17b9743d5132e}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{ACM} {SIGCOMM} Computer Communication Review}
+      \field{number}{4}
+      \field{title}{{BitTorrent} is an auction: analyzing and improving {BitTorrent}'s incentives}
+      \field{volume}{38}
+      \field{year}{2008}
+      \field{pages}{243\bibrangedash 254}
+      \range{pages}{12}
+    \endentry
+    \entry{mashtizadeh13}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=497e744a9f375d6d67f4c9c6d5647b67}{Mashtizadeh}{M\bibinitperiod}{Ali\bibnamedelima Jos\'{e}}{A\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{hash=01ee5e97071c7d2f5e0db7dee5c0b65d}{Bittau}{B\bibinitperiod}{Andrea}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=968761b908c4d8fe41c80edd482fadd2}{Huang}{H\bibinitperiod}{Yifeng\bibnamedelima Frank}{Y\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+        {{hash=f74609e259322f9c7b6a2c775a7d8e29}{Mazieres}{M\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \list{organization}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{828c1a29203c3ef5ee31d1cd0047ac82}
+      \strng{fullhash}{828c1a29203c3ef5ee31d1cd0047ac82}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Twenty-Fourth {ACM} Symposium on Operating Systems Principles}
+      \field{title}{Replication, history, and grafting in the {Ori} file system}
+      \field{year}{2013}
+      \field{pages}{151\bibrangedash 166}
+      \range{pages}{16}
+    \endentry
+    \entry{maymounkov02}{incollection}{}
+      \name{author}{2}{}{%
+        {{hash=221556d7e71e3256de194f3347838327}{Maymounkov}{M\bibinitperiod}{Petar}{P\bibinitperiod}{}{}{}{}}%
+        {{hash=f74609e259322f9c7b6a2c775a7d8e29}{Mazieres}{M\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{8301c8fd70416b42b1edda4450fbb598}
+      \strng{fullhash}{8301c8fd70416b42b1edda4450fbb598}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Peer-to-Peer Systems}
+      \field{title}{Kademlia: A peer-to-peer information system based on the xor metric}
+      \field{year}{2002}
+      \field{pages}{53\bibrangedash 65}
+      \range{pages}{13}
+    \endentry
+    \entry{mazieres00}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f74609e259322f9c7b6a2c775a7d8e29}{Mazieres}{M\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=bc5efc05b32405c362c66d0d80439218}{Kaashoek}{K\bibinitperiod}{Frans}{F\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Citeseer}%
+      }
+      \strng{namehash}{be7c8a434b5357e71382318729f8eb35}
+      \strng{fullhash}{be7c8a434b5357e71382318729f8eb35}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Self-certifying file system}
+      \field{year}{2000}
+    \endentry
+    \entry{mazieres98}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=f74609e259322f9c7b6a2c775a7d8e29}{Mazieres}{M\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=bf47e9a89253c3f1c964e6bb221faeb1}{Kaashoek}{K\bibinitperiod}{M\bibnamedelima Frans}{M\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+      }
+      \list{organization}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{cd6a0f97408602f4180d65fe24cd188b}
+      \strng{fullhash}{cd6a0f97408602f4180d65fe24cd188b}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 8th {ACM} {SIGOPS} European workshop on Support for composing distributed applications}
+      \field{title}{Escaping the evils of centralized control with self-certifying pathnames}
+      \field{year}{1998}
+      \field{pages}{118\bibrangedash 125}
+      \range{pages}{8}
+    \endentry
+    \entry{LBFS}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=6272407b3a4585f7b6d2c0f34eb5ac1f}{Muthitacharoen}{M\bibinitperiod}{Athicha}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=007aa4f458b854c3e9e7eaeeda29d4c9}{Chen}{C\bibinitperiod}{Benjie}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=f74609e259322f9c7b6a2c775a7d8e29}{Mazieres}{M\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \list{organization}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{315059ade6996cc222f9604a03c6781e}
+      \strng{fullhash}{315059ade6996cc222f9604a03c6781e}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{ACM} {SIGOPS} Operating Systems Review}
+      \field{number}{5}
+      \field{title}{A low-bandwidth network file system}
+      \field{volume}{35}
+      \field{year}{2001}
+      \field{pages}{174\bibrangedash 187}
+      \range{pages}{14}
+    \endentry
+    \entry{WebRTC}{report}{}
+      \name{author}{4}{}{%
+        {{hash=f3a972f98579c8c7dc759d18c35d01c5}{Narayanan}{N\bibinitperiod}{Anant}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=6ec10d8f26f4d082a049a9e605d73b99}{Jennings}{J\bibinitperiod}{Cullen}{C\bibinitperiod}{}{}{}{}}%
+        {{hash=e3fc3deeb08ccdeddb6a6c6d1fd14bf2}{Bergkvist}{B\bibinitperiod}{Adam}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=5dfb8d044989b31e30f9cf39d91b9ee0}{Burnett}{B\bibinitperiod}{Daniel}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \list{institution}{1}{%
+        {W3C}%
+      }
+      \strng{namehash}{2a0871b7c6e5ddf1f6c2631425f1cf65}
+      \strng{fullhash}{2a0871b7c6e5ddf1f6c2631425f1cf65}
+      \field{sortinit}{N}
+      \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{09}
+      \field{title}{{WebRTC} 1.0: Real-time Communication Between Browsers}
+      \field{type}{{W3C} Working Draft}
+      \field{year}{2013}
+      \verb{url}
+      \verb http://www.w3.org/TR/2013/WD-webrtc-20130910/
+      \endverb
+    \endentry
+    \entry{Dat}{online}{}
+      \name{author}{1}{}{%
+        {{hash=e856ccc06edc669a0ee4e98decb88cc5}{Ogden}{O\bibinitperiod}{Max}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{e856ccc06edc669a0ee4e98decb88cc5}
+      \strng{fullhash}{e856ccc06edc669a0ee4e98decb88cc5}
+      \field{sortinit}{O}
+      \field{sortinithash}{7803d2715d5e795e70382b084ab8d00e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Dat: version, fork, and sync data}
+      \verb{url}
+      \verb https://github.com/maxogden/dat
+      \endverb
+    \endentry
+    \entry{Plan9}{inproceedings}{}
+      \true{moreauthor}
+      \name{author}{4}{}{%
+        {{hash=93ef763b27739841ef3b85d235621787}{Pike}{P\bibinitperiod}{Rob}{R\bibinitperiod}{}{}{}{}}%
+        {{hash=44dfdc5c8e5c79b79d40fbd262e7e68c}{Presotto}{P\bibinitperiod}{Dave}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=0738a39ce7d754134211fbb089ce3a15}{Thompson}{T\bibinitperiod}{Ken}{K\bibinitperiod}{}{}{}{}}%
+        {{hash=f88da78392a92ceba5cd5813bc1ec9f5}{Trickey}{T\bibinitperiod}{Howard}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \list{organization}{1}{%
+        {London, UK}%
+      }
+      \strng{namehash}{0cfd13b017b5c8f284237b9f7438a2a9}
+      \strng{fullhash}{f481ecb9ca9f9980815205634dd4c70c}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the summer 1990 {UKUUG} Conference}
+      \field{title}{Plan 9 from bell labs}
+      \field{year}{1990}
+      \field{pages}{1\bibrangedash 9}
+      \range{pages}{9}
+    \endentry
+    \entry{Venti}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=ff79e7464fb0da9976c23473a3019502}{Quinlan}{Q\bibinitperiod}{Sean}{S\bibinitperiod}{}{}{}{}}%
+        {{hash=f1a3c5013adb18dd6f9cedb4b9de94ef}{Dorward}{D\bibinitperiod}{Sean}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{ef7329d2d0453101211a4b047e08500e}
+      \strng{fullhash}{ef7329d2d0453101211a4b047e08500e}
+      \field{sortinit}{Q}
+      \field{sortinithash}{15867262911a166ca2270ec58a0e3fe9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{FAST}
+      \field{title}{Venti: A New Approach to Archival Storage.}
+      \field{volume}{2}
+      \field{year}{2002}
+      \field{pages}{89\bibrangedash 101}
+      \range{pages}{13}
+    \endentry
+    \entry{Fossil}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=ff79e7464fb0da9976c23473a3019502}{Quinlan}{Q\bibinitperiod}{Sean}{S\bibinitperiod}{}{}{}{}}%
+        {{hash=47fc594399c11489838ccec2fe5ca538}{McKie}{M\bibinitperiod}{Jim}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=d02ba631c0c7595e1f0ca78d980ee917}{Cox}{C\bibinitperiod}{Russ}{R\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Lucent Technologies Bell Labs, Unpublished memorandum (September 2003)}%
+      }
+      \strng{namehash}{250ee8d53647f0a3f04ced2f514cfdac}
+      \strng{fullhash}{250ee8d53647f0a3f04ced2f514cfdac}
+      \field{sortinit}{Q}
+      \field{sortinithash}{15867262911a166ca2270ec58a0e3fe9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Fossil, an archival file server}
+      \field{year}{2003}
+    \endentry
+    \entry{RabinFingerprints}{book}{}
+      \true{moreauthor}
+      \name{author}{1}{}{%
+        {{hash=755f719073b9032722550536facb7dcd}{Rabin}{R\bibinitperiod}{Michael\bibnamedelima O.}{M\bibinitperiod\bibinitdelim O\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Center for Research in Computing Techn., Aiken Computation Laboratory, Univ.}%
+      }
+      \strng{namehash}{25dcd5e77aab10b302296a54ee1bd150}
+      \strng{fullhash}{25dcd5e77aab10b302296a54ee1bd150}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Fingerprinting by random polynomials}
+      \field{year}{1981}
+    \endentry
+    \entry{ICE}{article}{}
+      \name{author}{2}{}{%
+        {{hash=644f478601b58831ccd1039711f1eb6c}{Rosenberg}{R\bibinitperiod}{Jonathan}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=2386705678087f998d3481281e0a26a8}{Keranen}{K\bibinitperiod}{Ari}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{3cc74c4786ae689d5cdef4529f55a217}
+      \strng{fullhash}{3cc74c4786ae689d5cdef4529f55a217}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Interactive Connectivity Establishment} ({ICE}): A protocol for {Network Address Translator} ({NAT}) traversal for offer/answer protocols}
+      \field{year}{2013}
+    \endentry
+    \entry{LEDBAT}{article}{}
+      \name{author}{4}{}{%
+        {{hash=70c7c3e67ddcfe1da1cc20006b34b6ca}{Shalunov}{S\bibinitperiod}{Stanislav}{S\bibinitperiod}{}{}{}{}}%
+        {{hash=ac54c3524dee2249247a9711c08e2d6c}{Hazel}{H\bibinitperiod}{Greg}{G\bibinitperiod}{}{}{}{}}%
+        {{hash=68857d89a46df851303be12a76ce120a}{Iyengar}{I\bibinitperiod}{Janardhan}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=7764364f62f072167ba8733ddd9270e7}{Kuehlewind}{K\bibinitperiod}{Mirja}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{e55e8e93296cbf486f3d523ad0b0153c}
+      \strng{fullhash}{e55e8e93296cbf486f3d523ad0b0153c}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{draft-ietf-ledbat-congestion-04. txt}
+      \field{title}{Low extra delay background transport ({LEDBAT})}
+      \field{year}{2010}
+    \endentry
+    \entry{SCTP}{book}{}
+      \name{author}{2}{}{%
+        {{hash=da0dfda527696bb67a708a09cff2d8e1}{Stewart}{S\bibinitperiod}{Randall\bibnamedelima R}{R\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+        {{hash=a94ad255b0f4cf07a05a7c6cbc1f00ff}{Xie}{X\bibinitperiod}{Qiaobing}{Q\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Longman Publishing Co., Inc.}%
+      }
+      \strng{namehash}{adc5268270e7c9fdeaeaa384be6910c0}
+      \strng{fullhash}{adc5268270e7c9fdeaeaa384be6910c0}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Stream control transmission protocol ({SCTP}): a reference guide}
+      \field{year}{2001}
+    \endentry
+    \entry{FUSE}{article}{}
+      \true{moreauthor}
+      \name{author}{1}{}{%
+        {{hash=c72de6a5fa2a8fff2c3e56b97b395502}{Szeredi}{S\bibinitperiod}{Miklos}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{b873c1e68a084ec851d5f43b4b44089c}
+      \strng{fullhash}{b873c1e68a084ec851d5f43b4b44089c}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{FUSE}: Filesystem in userspace}
+      \verb{url}
+      \verb http://fuse.sourceforge.net/
+      \endverb
+    \endentry
+    \entry{rsync}{article}{}
+      \true{moreauthor}
+      \name{author}{2}{}{%
+        {{hash=e03aa2792f85bde1bb795365e3bdc0b7}{Tridgell}{T\bibinitperiod}{Andrew}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=19312cfae8512bb399698679913bf5d3}{Mackerras}{M\bibinitperiod}{Paul}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{8d754fdcce8417ce89a679f9db372983}
+      \strng{fullhash}{f6d8013cabcdc0b555c4423509819584}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The rsync algorithm}
+      \field{year}{1996}
+    \endentry
+    \entry{wang13}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=cce05cab2c437e9c128f853684ee3137}{Wang}{W\bibinitperiod}{Liang}{L\bibinitperiod}{}{}{}{}}%
+        {{hash=e7b03599abff1ed1e25eef05c27ee9c1}{Kangasharju}{K\bibinitperiod}{Jussi}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{ef4a79b4ab2f11b2d0e1412f49683cbd}
+      \strng{fullhash}{ef4a79b4ab2f11b2d0e1412f49683cbd}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Peer-to-Peer Computing ({P2P}), 2013 {IEEE} Thirteenth International Conference on}
+      \field{title}{Measuring large-scale distributed systems: case of {BitTorrent Mainline DHT}}
+      \field{year}{2013}
+      \field{pages}{1\bibrangedash 10}
+      \range{pages}{10}
+    \endentry
+    \entry{Proquint}{article}{}
+      \name{author}{1}{}{%
+        {{hash=34a3e014b99e3eeffd2528716c47b4b8}{Wilkerson}{W\bibinitperiod}{Daniel\bibnamedelima Shawcross}{D\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{34a3e014b99e3eeffd2528716c47b4b8}
+      \strng{fullhash}{34a3e014b99e3eeffd2528716c47b4b8}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{arXiv} preprint {arXiv}:0901.4016}
+      \field{title}{A Proposal for Proquints: Identifiers that are Readable, Spellable, and Pronounceable}
+      \field{year}{2009}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
 
-\bibitem{cohen03}
-B.~Cohen.
-\newblock Incentives build robustness in bittorrent.
-\newblock In {\em Workshop on Economics of Peer-to-Peer systems}, volume~6,
-  pages 68--72, 2003.
-
-\bibitem{dean11}
-J.~Dean and S.~Ghemawat.
-\newblock leveldb--a fast and lightweight key/value database library by google,
-  2011.
-
-\bibitem{freedman04}
-M.~J. Freedman, E.~Freudenthal, and D.~Mazieres.
-\newblock Democratizing content publication with coral.
-\newblock In {\em NSDI}, volume~4, pages 18--18, 2004.
-
-\bibitem{AFS}
-J.~H. Howard, M.~L. Kazar, S.~G. Menees, D.~A. Nichols, M.~Satyanarayanan,
-  R.~N. Sidebotham, and M.~J. West.
-\newblock Scale and performance in a distributed file system.
-\newblock {\em ACM Transactions on Computer Systems (TOCS)}, 6(1):51--81, 1988.
-
-\bibitem{Oceanstore}
-J.~Kubiatowicz, D.~Bindel, Y.~Chen, S.~Czerwinski, P.~Eaton, D.~Geels,
-  R.~Gummadi, S.~Rhea, H.~Weatherspoon, W.~Weimer, et~al.
-\newblock Oceanstore: An architecture for global-scale persistent storage.
-\newblock {\em ACM Sigplan Notices}, 35(11):190--201, 2000.
-
-\bibitem{levin08}
-D.~Levin, K.~LaCurts, N.~Spring, and B.~Bhattacharjee.
-\newblock Bittorrent is an auction: analyzing and improving bittorrent's
-  incentives.
-\newblock In {\em ACM SIGCOMM Computer Communication Review}, volume~38, pages
-  243--254. ACM, 2008.
-
-\bibitem{mashtizadeh13}
-A.~J. Mashtizadeh, A.~Bittau, Y.~F. Huang, and D.~Mazieres.
-\newblock Replication, history, and grafting in the ori file system.
-\newblock In {\em Proceedings of the Twenty-Fourth ACM Symposium on Operating
-  Systems Principles}, pages 151--166. ACM, 2013.
-
-\bibitem{maymounkov02}
-P.~Maymounkov and D.~Mazieres.
-\newblock Kademlia: A peer-to-peer information system based on the xor metric.
-\newblock In {\em Peer-to-Peer Systems}, pages 53--65. Springer, 2002.
-
-\bibitem{mazieres00}
-D.~Mazieres and F.~Kaashoek.
-\newblock Self-certifying file system.
-\newblock 2000.
-
-\bibitem{mazieres98}
-D.~Mazieres and M.~F. Kaashoek.
-\newblock Escaping the evils of centralized control with self-certifying
-  pathnames.
-\newblock In {\em Proceedings of the 8th ACM SIGOPS European workshop on
-  Support for composing distributed applications}, pages 118--125. ACM, 1998.
-
-\bibitem{ICE}
-J.~Rosenberg and A.~Keranen.
-\newblock Interactive connectivity establishment (ice): A protocol for network
-  address translator (nat) traversal for offer/answer protocols.
-\newblock 2013.
-
-\bibitem{LEDBAT}
-S.~Shalunov, G.~Hazel, J.~Iyengar, and M.~Kuehlewind.
-\newblock Low extra delay background transport (ledbat).
-\newblock {\em draft-ietf-ledbat-congestion-04. txt}, 2010.
-
-\bibitem{SCTP}
-R.~R. Stewart and Q.~Xie.
-\newblock {\em Stream control transmission protocol (SCTP): a reference guide}.
-\newblock Addison-Wesley Longman Publishing Co., Inc., 2001.
-
-\bibitem{wang13}
-L.~Wang and J.~Kangasharju.
-\newblock Measuring large-scale distributed systems: case of bittorrent
-  mainline dht.
-\newblock In {\em Peer-to-Peer Computing (P2P), 2013 IEEE Thirteenth
-  International Conference on}, pages 1--10. IEEE, 2013.
-
-\end{thebibliography}
