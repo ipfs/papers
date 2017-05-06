@@ -107,7 +107,7 @@ S/Kademlia~\cite{baumgart07} extends Kademlia to protect against malicious attac
 \begin{enumerate}
 
   \item S/Kademlia provides schemes to secure \texttt{NodeId} generation,
-        and prevent Sybill attacks. It requires nodes to create a PKI key pair, derive their identity from it, and sign their messages to each other. One scheme includes a proof-of-work crypto puzzle to make generating Sybills expensive.
+        and prevent Sybil attacks. It requires nodes to create a PKI key pair, derive their identity from it, and sign their messages to each other. One scheme includes a proof-of-work crypto puzzle to make generating Sybils expensive.
 
   \item S/Kademlia nodes lookup values over disjoint paths, in order to
         ensure honest nodes can connect to each other in the presence of a large fraction of adversaries in the network. S/Kademlia achieves a success rate of 0.85 even with an adversarial fraction as large as half of the nodes.
@@ -379,7 +379,7 @@ The \textit{debt ratio} is a measure of trust:
 lenient to debts between nodes that have previously exchanged lots of data
 successfully, and merciless to unknown, untrusted nodes. This
 (a) provides resistance to attackers who would create lots of new nodes
-(sybill attacks),
+(sybil attacks),
 (b) protects previously successful trade relationships, even if one of the
 nodes is temporarily unable to provide value, and
 (c) eventually chokes relationships that have deteriorated until they
@@ -532,7 +532,7 @@ sender -- are expected to be caught before the data is given to BitSwap.
 
 The \texttt{final} parameter to \texttt{close} signals whether the intention
 to tear down the connection is the sender's or not. If false, the receiver
-may opt to re-open the connection immediatelty. This avoids premature
+may opt to re-open the connection immediately. This avoids premature
 closes.
 
 A peer connection should be closed under two conditions:
@@ -601,7 +601,7 @@ The IPFS Object format is:
 \end{verbatim}
 
 
-The IPFS Merkle DAG is an extremely flexible way to store data. The only requirements are that object references be (a) content addressed, and (b) encoded in the format above. IPFS grants applications complete control over the data field; applications can use any custom data format they chose, which IPFS may not understand. The separate in-object link table allows IPFS to:
+The IPFS Merkle DAG is an extremely flexible way to store data. The only requirements are that object references be (a) content addressed, and (b) encoded in the format above. IPFS grants applications complete control over the data field; applications can use any custom data format they choose, which IPFS may not understand. The separate in-object link table allows IPFS to:
 
 \begin{itemize}
 
@@ -1132,7 +1132,7 @@ IPFS is an ambitious vision of new decentralized Internet infrastructure, upon w
 
 \section{Acknowledgments}
 
-IPFS is the synthesis of many great ideas and systems. It would be impossible to dare such ambitious goals without standing on the shoulders of such giants. Personal thanks to David Dalrymple, Joe Zimmerman, and Ali Yahya for long discussions on many of these ideas, in particular: exposing the general Merkle DAG (David, Joe), rolling hash blocking (David), and s/kademlia sybill protection (David, Ali). And special thanks to David Mazieres, for his ever brilliant ideas.
+IPFS is the synthesis of many great ideas and systems. It would be impossible to dare such ambitious goals without standing on the shoulders of such giants. Personal thanks to David Dalrymple, Joe Zimmerman, and Ali Yahya for long discussions on many of these ideas, in particular: exposing the general Merkle DAG (David, Joe), rolling hash blocking (David), and s/kademlia sybil protection (David, Ali). And special thanks to David Mazieres, for his ever brilliant ideas.
 
 \section{References TODO}
 
