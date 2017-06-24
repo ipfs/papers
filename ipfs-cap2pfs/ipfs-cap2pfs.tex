@@ -487,7 +487,7 @@ When connecting, a node initializes a connection with a
 zeroed out. Then, sends an Open message with the \texttt{Ledger} to the peer.
 
 Upon receiving an \texttt{Open} message, a peer chooses whether to activate
-the connection. If -- acording to the receiver's \texttt{Ledger} -- the sender
+the connection. If -- according to the receiver's \texttt{Ledger} -- the sender
 is not a trusted agent (transmission below zero, or large outstanding debt) the
 receiver may opt to ignore the request. This should be done probabilistically
 with an \texttt{ignore\_cooldown} timeout, as to allow errors to be corrected
