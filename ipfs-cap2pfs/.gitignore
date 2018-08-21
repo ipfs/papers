@@ -1,8 +1,6 @@
-gfs.pdf
-gfs.aux
-gfs.log
-texput.log
-ipfs.aux
-ipfs.log
-ipfs.pgf-plot.gnuplot
-ipfs.pgf-plot.table
+*.aux
+*.log
+*.gnuplot
+*.table
+*.blg
+*.bbl
