@@ -5,7 +5,7 @@ LONG=ipfs-toward-the-permanent-web
 all: $(LONG).pdf
 
 $(LONG).pdf: $(SHORT).tex sig-alternate.cls
-	pdflatex --shell-escape $(SHORT).tex
+	lualatex --shell-escape $(SHORT).tex
 	mv $(SHORT).pdf $(LONG).pdf
 
 clean:
