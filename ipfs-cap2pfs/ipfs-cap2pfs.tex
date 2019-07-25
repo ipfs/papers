@@ -132,7 +132,7 @@ BitTorrent~\cite{cohen03} is a widely successful peer-to-peer filesharing system
 
 \subsection{Version Control Systems - Git}
 
-Version Control Systems provide facilities to model files changing over time and distribute different versions efficiently. The popular version control system Git provides a powerful Merkle DAG \footnote{Merkle Directed Acyclic Graph -- similar but more general construction than a Merkle Tree. Deduplicated, does not need to be balanced, and non-leaf nodes contain data.} object model that captures changes to a filesystem tree in a distributed-friendly way.
+Version Control Systems provide facilities to model files changing over time and distribute different versions efficiently. The popular version control system Git provides a powerful Merkle DAG \footnote{\href{https://en.wikipedia.org/wiki/Directed_acyclic_graph}{Merkle Directed Acyclic Graph} -- similar but more general construction than a \href{https://en.wikipedia.org/wiki/Merkle_tree}{Merkle Tree}. Deduplicated, does not need to be balanced, and non-leaf nodes contain data. } object model that captures changes to a filesystem tree in a distributed-friendly way.
 
 \begin{enumerate}
   \item Immutable objects represent Files (\texttt{blob}), Directories (\texttt{tree}), and Changes (\texttt{commit}).
